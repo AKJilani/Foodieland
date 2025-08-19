@@ -1,0 +1,101 @@
+Web Development with Python, Django & React
+===========================================
+Project Details: A user-driven platform titled ‘FoodieLand’ where anyone can create an
+account to share and explore food recipes, write blogs, and connect with other cooking
+enthusiasts. No admin panel is required; the platform is fully community-driven.
+
+Pages & Features:
+
+1. Authentication Pages: Allow users to create accounts, log in, and manage their
+profiles securely.
+Features:
+● Sign Up via email & password or social media (Google, Facebook, etc.)
+● Log in with email & password or social login
+● Email Verification for account activation
+● Form Validation:
+○ Mandatory field checks
+○ Email format verification
+○ Strong password validation
+● Forgot Password
+
+2. Home Page: Present an engaging entry point for exploring recipes, blogs, and chefs.
+Features:
+● Navigation Bar with clickable links: Home, Recipes, Blogs, Contact, Profile
+● Hero Slider showcasing featured recipes (fetched dynamically from the
+database)
+● Categories Section: Category cards (clicking will open filtered recipe list
+fetching from database)
+● Add Recipe Button (visible to logged-in users)
+● Recipe Listing Grid: Shows recipe preview with thumbnail, title, and rating
+(fetching from database)
+● Featured Chef Section: “Learn More” will open a detailed chef profile
+● Social Media Handles for platform branding
+
+3. Recipe Details Page: Display complete information about a specific recipe.
+Features:
+● Featured image and recipe title
+● Ingredient list
+● Step-by-step preparation guide
+● Author/Chef bio and profile link
+● Related Recipes section
+● You May Also Like recommendations
+
+4. Recipe Adding Page: Allow logged-in users to submit new recipes.
+Features:
+● Recipe Title
+● Short Description
+● Image Upload
+● Ingredients (multi-line or list format)
+● Preparation Steps
+● Category selection
+● Submit Button to save to database (user ID stored as author)
+
+5. Blog List Page: Display all blog posts with browsing options.
+Features:
+● Add Blog Button (only for logged-in users)
+● Blog listing with:
+○ Image
+○ Title
+○ Short description
+● Sidebar:
+○ Recent posts
+○ Blog categories
+
+6. Blog Post Page: Show the complete content of a single blog post.
+Features:
+● Large featured image
+● Post title and author
+● Full article content
+● Related blog posts section
+
+7. Blog Adding Page: Allow users to publish blog articles.
+Features:
+● Blog Title
+● Short Description
+● Image Upload
+● Full Content
+● Submit Button to save blog in database (user ID stored as author)
+
+8. Contact Us Page: Provide a channel for user communication.
+Features:
+● Contact Form:
+○ Name
+○ Email
+○ Message
+● Contact details (phone, email, address)
+● Recent recipes/posts section
+
+9. User Profile Page: Let users manage their account and view received messages.
+Features:
+● Display personal details (name, email, profile picture, bio)
+● Edit profile details
+● Delete account
+● Messages Section: Stores messages received via the “Contact Us” form
+
+Access Rules:
+● Public Access (No Login Required):
+○ View all recipes
+○ View all blogs
+● Logged-in Users:
+○ Add, edit and delete their recipes/blogs and edit their profile
+○ View received messages
