@@ -117,7 +117,7 @@ EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "akjilani.testapplication@gmail.com"
-EMAIL_HOST_PASSWORD = "nbhh qqsr omub tglx"
+EMAIL_HOST_PASSWORD = "rkof ouop ulqc senu"
 
 # JWT
 SIMPLE_JWT = {
