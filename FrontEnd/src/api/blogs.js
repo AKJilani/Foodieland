@@ -45,6 +45,3 @@ export async function createComment(payload) {
 	const { data } = await api.post('/blogs/comments/', payload)
 	return data
 }
-
-
-

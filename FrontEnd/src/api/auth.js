@@ -25,9 +25,14 @@ export async function updateMe(payload) {
 	return data
 }
 
-export async function verifyEmail(token) {
-	const { data } = await api.post('/auth/verify-email/', { token })
-	return data
+
+// Use Firebase endpoint for email verification
+export async function verifyEmail(oobCode) {
+    const { data } = await api.post('/auth/firebase-verify-email/', { 
+        oobCode: oobCode,
+        mode: 'verifyEmail'
+    })
+    return data
 }
 
 export async function requestPasswordReset(email) {

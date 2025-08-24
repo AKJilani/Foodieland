@@ -24,11 +24,9 @@ export default function Footer() {
 					</div>
 				</div>
 			</div>
-			<div className="border-t">
+			<div className="border-t bg-gray-50 text-center">
 				<div className="max-w-6xl mx-auto px-4 py-6 text-xs text-gray-500">© {new Date().getFullYear()} FoodieLand. All rights reserved.</div>
 			</div>
 		</footer>
 	)
 }
-
-
