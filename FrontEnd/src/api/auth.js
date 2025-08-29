@@ -1,7 +1,11 @@
 import api, { setTokens, clearTokens } from './client'
 
-export async function registerUser({ name, email, password }) {
-    const { data } = await api.post('/auth/register/', { name, email, password })
+export async function registerUser(formData) {
+    const { data } = await api.post('/auth/register/', formData, {
+        headers: {
+            'Content-Type': 'multipart/form-data',
+        }
+    })
     return data
 }
 
@@ -30,8 +34,17 @@ export async function fetchMe() {
     return data
 }
 
+// export async function updateMe(payload) {
+//     const { data } = await api.patch('/auth/me/', payload)
+//     return data
+// }
+
 export async function updateMe(payload) {
-    const { data } = await api.patch('/auth/me/', payload)
+    const config = {}
+    if (payload instanceof FormData) {
+        config.headers = { 'Content-Type': 'multipart/form-data' }
+    }
+    const { data } = await api.patch('/auth/me/', payload, config)
     return data
 }
 

@@ -15,6 +15,7 @@ import NotFound from '../views/NotFound'
 import RecipesPage from '../views/RecipesPage'
 import ResetPasswordPage from '../views/auth/ResetPasswordPage'
 import ForgotPasswordPage from '../views/auth/ForgotPasswordPage'
+import ContactUS from '../views/ContactUS'
 
 export default function AppRouter() {
 	return (
@@ -29,6 +30,7 @@ export default function AppRouter() {
 			<Route path="/blogs/new" element={<ProtectedRoute><BlogFormPage mode="create" /></ProtectedRoute>} />
 			<Route path="/blogs/:id/edit" element={<ProtectedRoute><BlogFormPage mode="edit" /></ProtectedRoute>} />
 			<Route path="/contact" element={<ContactPage />} />
+			<Route path="/contact_US" element={<ContactUS />} />
 			<Route path="/login" element={<LoginPage />} />
 			<Route path="/register" element={<RegisterPage />} />
 			<Route path="/verify-email" element={<VerifyEmailPage />} />

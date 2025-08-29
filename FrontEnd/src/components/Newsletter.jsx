@@ -1,17 +1,31 @@
 import { useState } from 'react';
+import { subscribeNewsletter } from '../api/interactions';
+import Swal from 'sweetalert2';
+import LeftPlate from '../assets/leftside-Newsletter-Photo-plate.png';
+import RightPlate from '../assets/rightside-Newsletter-Photo-plate.png';
 
 export default function Newsletter() {
 	const [email, setEmail] = useState('');
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		console.log('Email submitted:', email);
+		try {
+			const res = await subscribeNewsletter(email);
+			Swal.fire("Success", "You have subscribed successfully!", "success");
+			setEmail(""); // clear input after success
+		} catch (err) {
+			console.error(err);
+			if (err.response?.status === 400) {
+				Swal.fire("Error", "This email is already subscribed.", "error");
+			} else {
+				Swal.fire("Error", "Something went wrong. Try again.", "error");
+			}
+		}
 	};
 
 	return (
 		<section className="relative py-20">
 			<div className="max-w-7xl mx-auto px-4 relative p-20 rounded-3xl" style={{ backgroundColor: "#E7F9FD" }}>
-				{/* Main Content */}
 				<div className="text-center relative z-10 max-w-3xl mx-auto">
 					<h1 className="text-5xl font-bold text-gray-900 mb-6">
 						Deliciousness to your inbox
@@ -19,6 +33,7 @@ export default function Newsletter() {
 					<p className="text-gray-600 text-lg mb-10 leading-relaxed px-8">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
 					</p>
+
 					{/* Email Subscription Form */}
 					<div className="flex gap-0 max-w-lg mx-auto">
 						<input
@@ -36,26 +51,16 @@ export default function Newsletter() {
 						</button>
 					</div>
 				</div>
-				<div>
-					{/* Left Decorative Image */}
-					<div className="absolute bottom-0 left-0 overflow-hidden">
-						<img
-							src="src/assets/leftside-Newsletter-Photo-plate.png"
-							alt="Decorative Left"
-							style={{ borderBottomLeftRadius: '3rem' }}
-						/>
-					</div>
 
-					{/* Right Decorative Image */}
+				{/* Decorative Images */}
+				<div>
+					<div className="absolute bottom-0 left-0 overflow-hidden">
+						<img src={LeftPlate} alt="Decorative Left" style={{ borderBottomLeftRadius: '3rem' }} />
+					</div>
 					<div className="absolute bottom-0 right-0 overflow-hidden">
-						<img
-							src="src/assets/rightside-Newsletter-Photo-plate.png"
-							alt="Decorative Right"
-							style={{ borderBottomRightRadius: '3rem' }}
-						/>
+						<img src={RightPlate} alt="Decorative Right" style={{ borderBottomRightRadius: '3rem' }} />
 					</div>
 				</div>
-
 			</div>
 		</section>
 	)

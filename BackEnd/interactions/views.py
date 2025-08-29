@@ -4,6 +4,8 @@ from .serializers import ContactMessageSerializer, UserFollowSerializer, Newslet
 from django.contrib.auth import get_user_model
 from rest_framework.decorators import action
 
+User = get_user_model()
+
 class ContactMessageViewSet(viewsets.ModelViewSet):
     serializer_class = ContactMessageSerializer
     permission_classes = [permissions.AllowAny]
@@ -11,7 +13,8 @@ class ContactMessageViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         if self.request.user.is_authenticated:
-            return ContactMessage.objects.filter(recipient=self.request.user).order_by("-created_at")
+            from django.db.models import Q
+            return ContactMessage.objects.filter(Q(recipient=self.request.user) | Q(sender_email=self.request.user.email)).order_by("-created_at")
         return ContactMessage.objects.none()
 
     def create(self, request, *args, **kwargs):
@@ -19,18 +22,34 @@ class ContactMessageViewSet(viewsets.ModelViewSet):
 
     @decorators.action(detail=True, methods=["post"])
     def reply(self, request, pk=None):
+        """
+        Fixed reply system - now properly sends reply to original sender as a user
+        """
         original_message = self.get_object()
+        
+        # Find the original sender by email to get their user ID
+        try:
+            original_sender = User.objects.get(email=original_message.sender_email)
+        except User.DoesNotExist:
+            return response.Response(
+                {"error": "Original sender is not a registered user"}, 
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        
         reply_data = {
             'sender_name': request.user.name or request.user.email,
             'sender_email': request.user.email,
             'message': request.data.get('message'),
-            'recipient': original_message.sender_email,  # Reply to original sender
+            'recipient': original_sender.id,  # Now correctly using user ID
             'parent_message': original_message.id
         }
+        
         serializer = self.get_serializer(data=reply_data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
-        return response.Response({"detail": "Reply sent"}, status=status.HTTP_201_CREATED)
+        
+        return response.Response({"detail": "Reply sent successfully"}, status=status.HTTP_201_CREATED)
+
     
 class UserFollowViewSet(viewsets.ModelViewSet):
     serializer_class = UserFollowSerializer

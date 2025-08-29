@@ -13,9 +13,11 @@ class UserSerializer(serializers.ModelSerializer):
 
 class RegisterSerializer(serializers.ModelSerializer):
 	password = serializers.CharField(write_only=True, min_length=8)
+	profile_picture = serializers.ImageField(required=False, allow_null=True)
+	bio = serializers.CharField(required=False, allow_blank=True, style={'base_template': 'textarea.html'})
 	class Meta:
 		model = User
-		fields = ["name", "email", "password"]
+		fields = ["name", "email", "password", "profile_picture", "bio"]
 
 	def create(self, validated_data):
 		user = User.objects.create_user(**validated_data)

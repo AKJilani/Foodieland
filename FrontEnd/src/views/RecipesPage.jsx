@@ -34,6 +34,11 @@ export default function RecipesPage() {
         return (data?.results || []).filter(r => r.category === selectedCat);
     }, [data, selectedCat]);
 
+    const { data: related } = useQuery({
+        queryKey: ['related-recipes'],
+        queryFn: () => listRecipes({ ordering: '-created_at' }),
+    })
+
     return (
         <>
             <section className="max-w-6xl mx-auto px-4 py-12">
@@ -56,9 +61,9 @@ export default function RecipesPage() {
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {filteredResults.map(r => (
-                        <RecipeCard 
-                            key={r.id} 
-                            {...r} 
+                        <RecipeCard
+                            key={r.id}
+                            {...r}
                             category={categoryMap.get(r.category)} // Pass the category name here
                         />
                     ))}
@@ -71,6 +76,17 @@ export default function RecipesPage() {
                 <Pagination page={page} setPage={setPage} hasNext={Boolean(data?.next)} hasPrev={Boolean(data?.previous)} />
             </section>
             <Newsletter />
+            {/* Related Recipes */}
+            <section className="max-w-7xl mx-auto px-4 py-12">
+                <h3 className="text-2xl font-bold mb-6">🍲 You may also like</h3>
+                <div className="flex gap-6 overflow-x-auto pb-2">
+                    {related?.results?.slice(0, 6)?.map(r => (
+                        <div key={r.id} className="w-64 flex-shrink-0">
+                            <RecipeCard {...r} />
+                        </div>
+                    ))}
+                </div>
+            </section>
         </>
     )
 }

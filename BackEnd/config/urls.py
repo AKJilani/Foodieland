@@ -7,7 +7,7 @@ from rest_framework.routers import DefaultRouter
 from users.views import UserViewSet
 # Create a router and register our ViewSet with it.
 router = DefaultRouter()
-router.register(r'users', UserViewSet) # will create /api/users/ and /api/users/{id}/
+router.register(r'users', UserViewSet)
 
 urlpatterns = [
 	path("", SpectacularSwaggerView.as_view(url_name="schema"), name="root"),
