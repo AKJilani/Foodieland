@@ -1,6 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import HomePage from '../views/HomePage'
-import RecipesPage from '../views/RecipesPage'
 import RecipeDetailsPage from '../views/RecipeDetailsPage'
 import RecipeFormPage from '../views/RecipeFormPage'
 import BlogsPage from '../views/BlogsPage'
@@ -10,10 +9,12 @@ import ContactPage from '../views/ContactPage'
 import LoginPage from '../views/auth/LoginPage'
 import RegisterPage from '../views/auth/RegisterPage'
 import VerifyEmailPage from '../views/auth/VerifyEmailPage'
-import ResetPasswordPage from '../views/auth/ResetPasswordPage'
 import ProfilePage from '../views/ProfilePage'
 import ProtectedRoute from '../components/ProtectedRoute'
 import NotFound from '../views/NotFound'
+import RecipesPage from '../views/RecipesPage'
+import ResetPasswordPage from '../views/auth/ResetPasswordPage'
+import ForgotPasswordPage from '../views/auth/ForgotPasswordPage'
 
 export default function AppRouter() {
 	return (
@@ -32,10 +33,9 @@ export default function AppRouter() {
 			<Route path="/register" element={<RegisterPage />} />
 			<Route path="/verify-email" element={<VerifyEmailPage />} />
 			<Route path="/reset-password" element={<ResetPasswordPage />} />
+			<Route path="/forgot-password" element={<ForgotPasswordPage />} />
 			<Route path="/profile" element={<ProfilePage />} />
 			<Route path="*" element={<NotFound />} />
 		</Routes>
 	)
 }
-
-

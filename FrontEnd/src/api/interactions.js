@@ -20,4 +20,14 @@ export async function unfollowUser(following) {
 	return data
 }
 
+export async function listUsers() {
+    const response = await api.get('/api/interactions/users/')
+    return response.data
+}
 
+export async function replyToMessage(messageId, replyText) {
+    const response = await api.post(`/api/interactions/contact-messages/${messageId}/reply/`, {
+        message: replyText
+    })
+    return response.data
+}
