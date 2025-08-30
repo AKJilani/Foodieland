@@ -99,3 +99,33 @@ Access Rules:
 ● Logged-in Users:
 ○ Add, edit and delete their recipes/blogs and edit their profile
 ○ View received messages
+
+
+Categories
+==============
+Breakfast = #edb1f1
+Vegan = #a2a8d3
+Meat = #ffb5b5
+Dessert = #ffaaa5
+Lunch = #fcffc1
+Chocolate = #bbded6
+
+Dinner = #dfebed
+Fastfood = #f6eedf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

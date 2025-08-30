@@ -1,192 +1,200 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { createBlog, getBlog, updateBlog, deleteBlog, listBlogCategories } from '../api/blogs'
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
+import { createRecipe, getRecipe, updateRecipe, listCategories, deleteRecipe } from '../api/recipes'
 
-export default function BlogFormPage({ mode }) {
+export default function RecipeFormPage({ mode }) {
   const navigate = useNavigate()
   const { id } = useParams()
   const isEdit = mode === 'edit'
 
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
-  const [content, setContent] = useState('')
+  const [nutritionInfo, setNutritionInfo] = useState({
+    calories: '',
+    carbohydrates: '',
+    cholesterol: '',
+    protein: '',
+    fat: '',
+    fiber: '',
+  })
+  const [imageFile, setImageFile] = useState(null)
+  const [ingredients, setIngredients] = useState('')
+  const [steps, setSteps] = useState('')
   const [category, setCategory] = useState('')
   const [cats, setCats] = useState([])
 
-  const [tab, setTab] = useState('write') // 'write' | 'preview'
-  const [saving, setSaving] = useState(false)
-  const [deleting, setDeleting] = useState(false)
-
-  const [imageFile, setImageFile] = useState(null) // For file upload
-  const [imagePreview, setImagePreview] = useState('') // Preview
-
   useEffect(() => {
-    let mounted = true
-    listBlogCategories().then((d) => {
-      if (mounted) setCats(d?.results || [])
-    })
-
+    listCategories().then(d => setCats(d.results || []))
     if (isEdit && id) {
-      getBlog(id).then((b) => {
-        if (!mounted) return
-        setTitle(b?.title || '')
-        setDescription(b?.description || '')
-        setContent(b?.content || '')
-        setCategory(b?.category || '')
-        setImagePreview(b?.featured_image || '')
+      getRecipe(id).then(r => {
+        setTitle(r.title || '')
+        setDescription(r.description || '')
+        setNutritionInfo(r.nutrition_info || {
+          calories: '',
+          carbohydrates: '',
+          cholesterol: '',
+          protein: '',
+          fat: '',
+          fiber: ''
+        })
+        setIngredients(Array.isArray(r.ingredients) ? r.ingredients.join('\n') : '')
+        setSteps(Array.isArray(r.preparation_steps) ? r.preparation_steps.join('\n') : '')
+        setCategory(r.category || '')
       })
     }
-
-    return () => { mounted = false }
   }, [isEdit, id])
 
   async function handleSubmit(e) {
     e.preventDefault()
-    setSaving(true)
-    try {
-      const formData = new FormData()
-      formData.append('title', title)
-      formData.append('description', description)
-      formData.append('content', content)
-      formData.append('category', category || '')
-      if (imageFile) formData.append('featured_image', imageFile)
+    const formData = new FormData()
+    formData.append("title", title)
+    formData.append("description", description)
+    formData.append("nutrition_info", JSON.stringify(nutritionInfo))
+    formData.append("category", category || "")
+    formData.append("ingredients", JSON.stringify(ingredients.split('\n').filter(Boolean)))
+    formData.append("preparation_steps", JSON.stringify(steps.split('\n').filter(Boolean)))
 
-      if (isEdit) {
-        await updateBlog(id, formData, true)
-        navigate(`/blogs/${id}`)
-      } else {
-        const b = await createBlog(formData, true)
-        navigate(`/blogs/${b.id}`)
-      }
-    } finally {
-      setSaving(false)
+    if (imageFile) {
+      formData.append("image", imageFile)
+    }
+
+    if (isEdit) {
+      await updateRecipe(id, formData, true)
+      navigate(`/recipes/${id}`)
+    } else {
+      const r = await createRecipe(formData, true)
+      navigate(`/recipes/${r.id}`)
     }
   }
 
   async function handleDelete() {
-    if (!isEdit || !id) return
-    if (confirm('Delete this blog?')) {
-      setDeleting(true)
-      try {
-        await deleteBlog(id)
-        navigate('/blogs')
-      } finally {
-        setDeleting(false)
-      }
+    if (confirm('Delete this recipe?')) {
+      await deleteRecipe(id)
+      navigate('/recipes')
     }
   }
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-10">
-      <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 sm:p-8">
-        <h2 className="text-3xl font-semibold text-gray-900 mb-6">{isEdit ? 'Edit Blog' : 'Add Blog'}</h2>
+    <div className="max-w-2xl mx-auto px-4 py-12">
+      <div className="bg-white shadow-lg rounded-2xl p-6">
+        <h2 className="text-2xl font-semibold mb-6">
+          {isEdit ? 'Edit Recipe' : 'Add Recipe'}
+        </h2>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-
-          {/* Title */}
-          <input
-            className="w-full border border-gray-300 rounded-xl px-4 py-3 text-base focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            placeholder="Your amazing title…"
-            value={title}
-            onChange={e => setTitle(e.target.value)}
-            required
-          />
-
-          {/* Image Upload */}
+        <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Featured Image</label>
+            <input
+              className="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition"
+              placeholder="Title"
+              value={title}
+              onChange={e => setTitle(e.target.value)}
+              required
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Recipe Image
+            </label>
             <input
               type="file"
               accept="image/*"
-              onChange={e => {
-                const file = e.target.files[0]
-                setImageFile(file)
-                setImagePreview(URL.createObjectURL(file))
-              }}
+              className="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition"
+              onChange={e => setImageFile(e.target.files[0])}
             />
-            {imagePreview && (
-              <img
-                src={imagePreview}
-                alt="Preview"
-                className="mt-2 w-full h-44 object-cover rounded-xl border border-gray-200"
-              />
-            )}
           </div>
 
-          {/* Description */}
-          <textarea
-            className="w-full border border-gray-300 rounded-xl px-4 py-3 text-base focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            rows={3}
-            placeholder="Short description"
-            value={description}
-            onChange={e => setDescription(e.target.value)}
-          />
+          <div>
+            <textarea
+              className="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition"
+              rows="3"
+              placeholder="Short description"
+              value={description}
+              onChange={e => setDescription(e.target.value)}
+            />
+          </div>
 
-          {/* Category */}
-          <select
-            className="w-full border border-gray-300 rounded-xl px-4 py-3 text-base focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            value={category}
-            onChange={e => setCategory(e.target.value)}
-          >
-            <option value="">No category</option>
-            {cats.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
-          </select>
-
-          {/* Markdown Content */}
-          <div className="space-y-3">
-            <div className="flex items-center justify-between">
-              <label className="text-sm text-gray-700">Content (Markdown supported)</label>
-              <div className="inline-flex rounded-lg border border-gray-300 overflow-hidden">
-                <button
-                  type="button"
-                  onClick={() => setTab('write')}
-                  className={`px-3 py-1.5 text-sm ${tab === 'write' ? 'bg-zinc-600 text-white' : 'bg-white text-gray-700'}`}
-                >Write</button>
-                <button
-                  type="button"
-                  onClick={() => setTab('preview')}
-                  className={`px-3 py-1.5 text-sm ${tab === 'preview' ? 'bg-zinc-600 text-white' : 'bg-white text-gray-700'}`}
-                >Preview</button>
-              </div>
+          {/* Nutritional Information */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Nutritional Information
+            </label>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                {key:'calories', label: 'Calories', unit:'kcal'},
+                {key:'carbohydrates', label: 'Carbohydrates', unit:'g'},
+                {key:'cholesterol', label: 'Cholesterol', unit:'mg'},
+                {key:'protein', label: 'Protein', unit:'g'},
+                {key:'fat', label: 'Fat', unit:'g'},
+                {key:'fiber', label: 'Fiber', unit:'g'}
+              ].map(({key, label, unit}) => (
+                <div key={key} className="flex items-center border rounded-lg px-3 py-2">
+                  <input
+                    type="number"
+                    min="0"
+                    className="w-full outline-none"
+                    placeholder={label}
+                    value={nutritionInfo[key]}
+                    onChange={e => 
+                      setNutritionInfo({ ...nutritionInfo, [key]: e.target.value })
+                    }
+                  />
+                  <span className="ml-2 text-gray-500">{unit}</span>
+                </div>
+              ))}
             </div>
-
-            {tab === 'write' ? (
-              <textarea
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 text-base focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                rows={14}
-                placeholder="# Heading 1\nWrite your blog in **Markdown**"
-                value={content}
-                onChange={e => setContent(e.target.value)}
-              />
-            ) : (
-              <div className="prose max-w-none border border-gray-200 rounded-xl p-4 bg-gray-50 overflow-x-auto">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                  {content || '*Nothing to preview yet… start typing in **Write** tab.*'}
-                </ReactMarkdown>
-              </div>
-            )}
           </div>
 
-          {/* Actions */}
-          <div className="flex items-center gap-3 pt-2">
-            <button
-              type="submit"
-              disabled={saving}
-              className="bg-zinc-900 hover:bg-gray-700 disabled:opacity-60 text-white px-6 py-3 rounded-xl shadow-sm transition"
+          <div>
+            <select
+              className="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition"
+              value={category}
+              onChange={e => setCategory(e.target.value)}
             >
-              {saving ? (isEdit ? 'Saving…' : 'Creating…') : (isEdit ? 'Save Changes' : 'Create Blog')}
-            </button>
+              <option value="">No category</option>
+              {cats.map(c => (
+                <option key={c.id} value={c.id}>
+                  {c.name}
+                </option>
+              ))}
+            </select>
+          </div>
 
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Ingredients (one per line)
+            </label>
+            <textarea
+              className="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition"
+              rows="5"
+              value={ingredients}
+              onChange={e => setIngredients(e.target.value)}
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Steps (one per line)
+            </label>
+            <textarea
+              className="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition"
+              rows="5"
+              value={steps}
+              onChange={e => setSteps(e.target.value)}
+            />
+          </div>
+
+          <div className="flex items-center gap-3 pt-2">
+            <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-lg shadow transition">
+              {isEdit ? 'Save Changes' : 'Create Recipe'}
+            </button>
             {isEdit && (
               <button
                 type="button"
                 onClick={handleDelete}
-                disabled={deleting}
-                className="px-6 py-3 rounded-xl border border-red-500 text-red-600 hover:bg-red-50 disabled:opacity-60 transition"
+                className="px-5 py-2 rounded-lg border text-red-600 border-red-600 hover:bg-red-50 transition"
               >
-                {deleting ? 'Deleting…' : 'Delete'}
+                Delete
               </button>
             )}
           </div>

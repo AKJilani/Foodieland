@@ -67,7 +67,7 @@ export default function CategoryCard({ id, name, icon, color = "#f8fafc" }) {
           <img
             src={imageSrc}
             alt={name}
-            className="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110 drop-shadow-sm"
+            className="w-30 h-30 object-contain transition-transform duration-300 group-hover:scale-110 drop-shadow-sm"
             onError={(e) => {
               console.error(`Failed to load image: ${imageSrc}`);
               e.target.style.display = 'none';
