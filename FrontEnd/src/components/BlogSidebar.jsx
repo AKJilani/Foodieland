@@ -3,10 +3,10 @@ import { listBlogs } from '../api/blogs'
 import { Link } from 'react-router-dom'
 
 export default function BlogSidebar() {
-  // Top 10 recent blogs
+  // Top 3 recent blogs (changed from 10 to 3)
   const { data: recentPosts } = useQuery({
     queryKey: ['recent-blogs'],
-    queryFn: () => listBlogs({ ordering: '-created_at', limit: 10 })
+    queryFn: () => listBlogs({ ordering: '-created_at', limit: 3 })
   })
 
   return (
@@ -18,7 +18,7 @@ export default function BlogSidebar() {
             <span className="text-green-600 font-bold">📅</span>
             <h4 className="text-xl font-bold text-gray-900">Recent Posts</h4>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-4 max-h-96 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
             {recentPosts.results.map(post => (
               <Link
                 key={post.id}

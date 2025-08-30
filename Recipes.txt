@@ -1,0 +1,513 @@
+Title: Spinach Omelette
+Short Description: Fluffy omelette with fresh spinach and aromatic herbs, perfect for a quick healthy breakfast or brunch meal.
+Ingredients:
+
+Eggs
+
+Fresh spinach
+
+Salt
+
+Pepper
+
+Cheese
+Steps:
+
+Whisk eggs with salt and pepper gently
+
+Heat pan and melt butter until sizzling
+
+Add spinach and cook until slightly wilted
+
+Pour eggs and cook until lightly golden
+
+Sprinkle cheese and fold omelette carefully
+Categories: Breakfast, Lunch
+
+Title: Quinoa Salad
+Short Description: Nutritious quinoa salad mixed with fresh vegetables and light lemon dressing for a refreshing and wholesome meal.
+Ingredients:
+
+Quinoa
+
+Cherry tomatoes
+
+Cucumber
+
+Lemon juice
+
+Olive oil
+Steps:
+
+Cook quinoa until fluffy and let cool
+
+Chop vegetables evenly and prepare lemon dressing
+
+Mix vegetables and quinoa together thoroughly
+
+Pour dressing over salad and toss gently
+
+Serve chilled for maximum freshness and flavor
+Categories: Vegan, Lunch
+
+Title: Honey Glazed Chicken
+Short Description: Tender chicken pieces coated in sweet honey glaze, baked to perfection for a flavorful dinner experience.
+Ingredients:
+
+Chicken breast
+
+Honey
+
+Soy sauce
+
+Garlic
+Steps:
+
+Preheat oven and prepare chicken pieces
+
+Mix honey, garlic, and soy sauce well
+
+Brush glaze generously over chicken pieces
+
+Bake chicken until golden brown and cooked
+
+Serve hot with fresh vegetables or rice
+Categories: Meat, Dinner
+
+Title: Chocolate Fudge Brownies
+Short Description: Rich chocolate brownies with soft fudgy texture, perfect for dessert or a sweet snack anytime.
+Ingredients:
+
+Cocoa powder
+
+Sugar
+
+Butter
+
+Flour
+
+Chocolate chips
+Steps:
+
+Melt butter and cocoa until smooth carefully
+
+Mix in sugar and eggs until combined
+
+Stir flour and chocolate chips evenly
+
+Pour batter into pan and bake
+
+Cool slightly before cutting and serving
+Categories: Dessert, Chocolate
+
+Title: Avocado Toast
+Short Description: Creamy avocado spread on toasted bread, topped with spices and lemon juice for a quick breakfast.
+Ingredients:
+
+Bread slices
+
+Ripe avocado
+
+Lemon juice
+
+Salt
+
+Pepper
+Steps:
+
+Toast bread slices until golden and crisp
+
+Mash avocado with lemon juice and seasoning
+
+Spread mashed avocado evenly over toast
+
+Sprinkle salt and pepper on top
+
+Serve immediately for best flavor and texture
+Categories: Vegan, Breakfast
+
+Title: Beef Stir Fry
+Short Description: Quick beef stir fry with colorful vegetables, served with soy sauce for a fast, delicious dinner.
+Ingredients:
+
+Beef strips
+
+Bell peppers
+
+Soy sauce
+
+Garlic
+
+Onion
+Steps:
+
+Heat oil in wok until very hot
+
+Add garlic and onions, stir fry lightly
+
+Toss beef strips until brown and cooked
+
+Add bell peppers and stir for few minutes
+
+Pour soy sauce, mix well, serve hot
+Categories: Meat, Dinner
+
+Title: Berry Smoothie
+Short Description: Refreshing smoothie made with mixed berries, yogurt, and honey, perfect for breakfast or a healthy snack.
+Ingredients:
+
+Mixed berries
+
+Yogurt
+
+Honey
+
+Milk
+Steps:
+
+Add berries and yogurt into blender jug
+
+Pour milk and honey over mixture carefully
+
+Blend until smooth and creamy texture achieved
+
+Pour into glass and serve immediately chilled
+
+Enjoy fresh for best taste and nutrition
+Categories: Breakfast, Dessert, Vegan
+
+Title: Veggie Wrap fresh 
+Short Description: Healthy wrap with fresh vegetables, hummus, and spices, perfect for lunch or light dinner.
+Ingredients:
+
+Tortilla
+
+Lettuce
+
+Tomato
+
+Cucumber
+
+Hummus
+Steps:
+
+Spread hummus evenly over tortilla wrap
+
+Layer lettuce, tomato, and cucumber slices
+
+Roll tortilla tightly ensuring filling stays intact
+
+Cut wrap into halves for easy serving
+
+Serve immediately with sauce or dressing
+Categories: Vegan, Lunch, Fastfood
+
+Title: Spaghetti Carbonara
+Short Description: Classic Italian pasta with creamy egg sauce, bacon, and parmesan cheese, ready in under 30 minutes.
+Ingredients:
+
+Spaghetti
+
+Eggs
+
+Bacon
+
+Parmesan cheese
+
+Black pepper
+Steps:
+
+Cook spaghetti until al dente, then drain
+
+Fry bacon until crispy golden brown carefully
+
+Whisk eggs with parmesan and black pepper
+
+Toss pasta with bacon and egg mixture
+
+Serve immediately with extra cheese on top
+Categories: Meat, Dinner
+
+Title: Banana Pancakes
+Short Description: Soft pancakes flavored with ripe bananas and cinnamon, perfect for breakfast or brunch.
+Ingredients:
+
+Flour
+
+Banana
+
+Milk
+
+Eggs
+
+Cinnamon
+Steps:
+
+Mash bananas and mix with eggs carefully
+
+Add flour, milk, and cinnamon slowly
+
+Heat pan and pour batter evenly
+
+Cook until golden and flip carefully
+
+Serve with syrup or fresh fruit topping
+Categories: Breakfast, Dessert
+
+Title: Vegan Lentil Curry
+Short Description: Flavorful lentil curry with spices and coconut milk, perfect for a filling vegan dinner.
+Ingredients:
+
+Red lentils
+
+Onion
+
+Garlic
+
+Coconut milk
+
+Curry powder
+Steps:
+
+Sauté onions and garlic until golden fragrant
+
+Add lentils and spices, stir well
+
+Pour coconut milk and simmer slowly
+
+Cook until lentils are tender and soft
+
+Serve hot with rice or bread
+Categories: Vegan, Dinner, Lunch
+
+Title: Chicken Tacos
+Short Description: Soft tacos filled with spiced chicken, fresh vegetables, and salsa, ideal for lunch or dinner.
+Ingredients:
+
+Chicken strips
+
+Tortilla
+
+Lettuce
+
+Tomato
+
+Salsa
+Steps:
+
+Cook chicken with spices until fully cooked
+
+Warm tortillas lightly before filling inside
+
+Layer lettuce, tomato, and chicken carefully
+
+Add salsa over chicken and vegetables
+
+Fold tacos and serve hot immediately
+Categories: Meat, Lunch, Fastfood
+
+Title: Chocolate Mug Cake
+Short Description: Quick chocolate cake prepared in a mug, perfect for an instant dessert craving.
+Ingredients:
+
+Flour
+
+Cocoa powder
+
+Sugar
+
+Milk
+
+Butter
+Steps:
+
+Mix flour, cocoa, and sugar in mug
+
+Add milk and butter, stir until smooth
+
+Microwave for two minutes until fully cooked
+
+Let cool slightly before enjoying warm
+
+Serve immediately with optional chocolate syrup
+Categories: Dessert, Chocolate
+
+Title: Roasted Vegetables
+Short Description: Oven-roasted vegetables with olive oil and herbs, perfect as a side dish for any meal.
+Ingredients:
+
+Carrots
+
+Zucchini
+
+Bell peppers
+
+Olive oil
+
+Herbs
+Steps:
+
+Chop vegetables into even bite-sized pieces
+
+Toss vegetables with olive oil and herbs
+
+Preheat oven and arrange vegetables on tray
+
+Roast until tender and edges turn golden
+
+Serve hot with sauce or seasoning
+Categories: Vegan, Lunch, Dinner
+
+Title: Fish Fillet
+Short Description: Lightly pan-fried fish fillet with lemon and herbs, perfect for a healthy dinner.
+Ingredients:
+
+Fish fillet
+
+Lemon juice
+
+Garlic
+
+Olive oil
+
+Herbs
+Steps:
+
+Season fish fillet with lemon and herbs
+
+Heat pan and add olive oil carefully
+
+Cook fish until golden and fully cooked
+
+Flip gently to avoid breaking fillet
+
+Serve hot with vegetables or salad
+Categories: Meat, Dinner
+
+Title: Apple Crumble
+Short Description: Sweet baked apple dessert with crunchy topping, perfect for dessert or tea time.
+Ingredients:
+
+Apples
+
+Flour
+
+Sugar
+
+Butter
+
+Cinnamon
+Steps:
+
+Slice apples and toss with sugar cinnamon
+
+Prepare crumble topping with flour and butter
+
+Layer apples and crumble in baking dish
+
+Bake until golden brown and bubbling hot
+
+Serve warm with ice cream if desired
+Categories: Dessert, Breakfast
+
+Title: Hummus Dip
+Short Description: Creamy hummus dip made from chickpeas, tahini, and olive oil, perfect for snacks or appetizers.
+Ingredients:
+
+Chickpeas
+
+Tahini
+
+Olive oil
+
+Lemon juice
+
+Garlic
+Steps:
+
+Blend chickpeas with tahini and olive oil
+
+Add lemon juice and garlic carefully
+
+Mix until smooth creamy consistency achieved
+
+Transfer to bowl and drizzle olive oil
+
+Serve with fresh vegetables or pita bread
+Categories: Vegan, Fastfood, Lunch
+
+Title: Margherita Pizza
+Short Description: Classic pizza topped with tomato, basil, and mozzarella cheese, baked to perfection in oven.
+Ingredients:
+
+Pizza dough
+
+Tomato sauce
+
+Mozzarella cheese
+
+Basil leaves
+Steps:
+
+Preheat oven and prepare pizza base evenly
+
+Spread tomato sauce over dough carefully
+
+Add mozzarella cheese and basil leaves
+
+Bake until cheese melts and crust golden
+
+Slice and serve hot immediately
+Categories: Vegan, Dinner, Fastfood
+
+Title: Fruit Salad
+Short Description: Fresh fruit salad with seasonal fruits, a light and refreshing snack or dessert.
+Ingredients:
+
+Apple
+
+Banana
+
+Orange
+
+Grapes
+
+Lemon juice
+Steps:
+
+Chop all fruits into bite-sized pieces
+
+Mix fruits gently in a large bowl
+
+Add lemon juice to prevent browning
+
+Toss lightly ensuring even coating of juice
+
+Serve fresh chilled for maximum taste
+Categories: Vegan, Breakfast, Dessert
+
+Title: Chicken Soup
+Short Description: Warm and comforting chicken soup with vegetables, perfect for lunch or dinner during cold days.
+Ingredients:
+
+Chicken pieces
+
+Carrots
+
+Celery
+
+Onion
+
+Broth
+Steps:
+
+Sauté onions and vegetables until fragrant
+
+Add chicken pieces and cook lightly
+
+Pour broth and simmer until tender cooked
+
+Season with salt and pepper carefully
+
+Serve hot with bread or crackers
+Categories: Meat, Dinner, Lunch
