@@ -87,7 +87,7 @@ export default function Hero({ featuredRecipes = [] }) {
                                     <div className="flex gap-4 items-center mb-6">
                                         <span className="inline-flex items-center px-4 py-2 bg-gray-800/70 text-gray-100 rounded-full text-sm font-medium border border-gray-700/10 shadow-lg">
                                             <LuClock className="text-gray-100 mr-1" />
-                                            {currentRecipe.prep_time || "30 minutes"}
+                                            {currentRecipe.prepTime || "30 minutes"}
                                         </span>
                                         <span className="inline-flex items-center px-4 py-2 bg-gray-800/70 text-gray-100 rounded-full text-sm font-medium border border-gray-700/50 shadow-sm">
                                             {currentRecipe.category || "Unknown Category"}

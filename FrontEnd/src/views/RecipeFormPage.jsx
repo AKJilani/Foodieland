@@ -9,6 +9,7 @@ export default function RecipeFormPage({ mode }) {
 
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
+  const [prepTime, setprepTime] = useState('')
   const [nutritionInfo, setNutritionInfo] = useState({
     calories: '',
     carbohydrates: '',
@@ -29,6 +30,7 @@ export default function RecipeFormPage({ mode }) {
       getRecipe(id).then(r => {
         setTitle(r.title || '')
         setDescription(r.description || '')
+        setprepTime(r.prepTime || '')
         setNutritionInfo(r.nutrition_info || {
           calories: '',
           carbohydrates: '',
@@ -49,6 +51,7 @@ export default function RecipeFormPage({ mode }) {
     const formData = new FormData()
     formData.append("title", title)
     formData.append("description", description)
+    formData.append("prepTime", prepTime)
     formData.append("nutrition_info", JSON.stringify(nutritionInfo))
     formData.append("category", category || "")
     formData.append("ingredients", JSON.stringify(ingredients.split('\n').filter(Boolean)))
@@ -113,6 +116,15 @@ export default function RecipeFormPage({ mode }) {
               onChange={e => setDescription(e.target.value)}
             />
           </div>
+          <div>
+            <input
+              className="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition"
+              placeholder="Preparation Time"
+              value={prepTime}
+              onChange={e => setprepTime(e.target.value)}
+              required
+            />
+          </div>
 
           {/* Nutritional Information */}
           <div>
@@ -121,13 +133,13 @@ export default function RecipeFormPage({ mode }) {
             </label>
             <div className="grid grid-cols-2 gap-4">
               {[
-                {key:'calories', label: 'Calories', unit:'kcal'},
-                {key:'carbohydrates', label: 'Carbohydrates', unit:'g'},
-                {key:'cholesterol', label: 'Cholesterol', unit:'mg'},
-                {key:'protein', label: 'Protein', unit:'g'},
-                {key:'fat', label: 'Fat', unit:'g'},
-                {key:'fiber', label: 'Fiber', unit:'g'}
-              ].map(({key, label, unit}) => (
+                { key: 'calories', label: 'Calories', unit: 'kcal' },
+                { key: 'carbohydrates', label: 'Carbohydrates', unit: 'g' },
+                { key: 'cholesterol', label: 'Cholesterol', unit: 'mg' },
+                { key: 'protein', label: 'Protein', unit: 'g' },
+                { key: 'fat', label: 'Fat', unit: 'g' },
+                { key: 'fiber', label: 'Fiber', unit: 'g' }
+              ].map(({ key, label, unit }) => (
                 <div key={key} className="flex items-center border rounded-lg px-3 py-2">
                   <input
                     type="number"
@@ -135,7 +147,7 @@ export default function RecipeFormPage({ mode }) {
                     className="w-full outline-none"
                     placeholder={label}
                     value={nutritionInfo[key]}
-                    onChange={e => 
+                    onChange={e =>
                       setNutritionInfo({ ...nutritionInfo, [key]: e.target.value })
                     }
                   />

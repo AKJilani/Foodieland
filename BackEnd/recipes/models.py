@@ -18,6 +18,7 @@ class Recipe(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
+    prepTime = models.TextField(blank=True, null=True)
     nutrition_info = models.JSONField(default=dict, blank=True)
     image = models.ImageField(upload_to="recipes/", blank=True, null=True)
     ingredients = models.JSONField(default=list, blank=True)

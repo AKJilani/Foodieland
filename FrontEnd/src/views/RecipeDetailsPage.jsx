@@ -81,8 +81,8 @@ export default function RecipeDetailsPage() {
 							<span>👨‍🍳 {r.author_name || 'Unknown'}</span>
 							<span>·</span>
 							<span>{Number(r.average_rating || 0).toFixed(1)} ★</span>
+							<span>Preparation Time: {r.prepTime} </span>
 						</div>
-
 						{/* Favorites + Rating */}
 						<div className="mt-5 flex flex-wrap items-center gap-4">
 							<button
