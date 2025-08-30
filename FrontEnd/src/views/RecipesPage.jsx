@@ -82,7 +82,7 @@ export default function RecipesPage() {
                 <div className="flex gap-6 overflow-x-auto pb-2">
                     {related?.results?.slice(0, 6)?.map(r => (
                         <div key={r.id} className="w-64 flex-shrink-0">
-                            <RecipeCard {...r} />
+                            <RecipeCard {...r} category={categoryMap.get(r.category)} />
                         </div>
                     ))}
                 </div>

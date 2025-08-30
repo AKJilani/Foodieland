@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import api from '../api/client'
 import { sendContactUsMessage } from '../api/interactions'
 import Newsletter from '../components/Newsletter'
 import RecipeCard from '../components/RecipeCard'
 import { useQuery } from '@tanstack/react-query'
-import { listRecipes } from '../api/recipes'
+import { listCategories, listRecipes } from '../api/recipes'
 
 export default function ContactUS() {
     const [name, setName] = useState('')
@@ -14,11 +14,25 @@ export default function ContactUS() {
     const [message, setMessage] = useState('')
     const [info, setInfo] = useState('')
     const [loading, setLoading] = useState(false)
-    
+
     const { data: related } = useQuery({
         queryKey: ['related-recipes'],
         queryFn: () => listRecipes({ ordering: '-created_at' }),
     })
+
+    const { data: cats } = useQuery({
+        queryKey: ['recipe-cats'],
+        queryFn: listCategories
+    });
+
+    // Create a map for quick category name lookup
+    const categoryMap = useMemo(() => {
+        const map = new Map();
+        cats?.results?.forEach(cat => {
+            map.set(cat.id, cat.name);
+        });
+        return map;
+    }, [cats]);
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -160,7 +174,7 @@ export default function ContactUS() {
                 <div className="flex gap-6 overflow-x-auto pb-2">
                     {related?.results?.slice(0, 6)?.map(r => (
                         <div key={r.id} className="w-64 flex-shrink-0">
-                            <RecipeCard {...r} />
+                            <RecipeCard {...r} category={categoryMap.get(r.category)} />
                         </div>
                     ))}
                 </div>

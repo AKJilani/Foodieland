@@ -3,9 +3,10 @@ import { useParams } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import {
 	getRecipe, listMyFavorites, addFavorite, removeFavorite,
-	listMyRatings, createRating, updateRating, listRecipes
+	listMyRatings, createRating, updateRating, listRecipes, listCategories
 } from '../api/recipes'
-import { useState, useEffect } from 'react'
+
+import { useState, useEffect, useMemo } from 'react'
 import RecipeCard from '../components/RecipeCard'
 import Newsletter from '../components/Newsletter';
 
@@ -16,6 +17,20 @@ export default function RecipeDetailsPage() {
 	const r = data || {}
 	const [favoriteId, setFavoriteId] = useState(null)
 	const [myRating, setMyRating] = useState(null)
+
+	// Then add this after your existing queries:
+	const { data: cats } = useQuery({
+		queryKey: ['recipe-cats'],
+		queryFn: listCategories
+	});
+
+	const categoryMap = useMemo(() => {
+		const map = new Map();
+		cats?.results?.forEach(cat => {
+			map.set(cat.id, cat.name);
+		});
+		return map;
+	}, [cats]);
 
 	useEffect(() => {
 		listMyFavorites().then(d => {
@@ -52,7 +67,7 @@ export default function RecipeDetailsPage() {
 		<>
 			{/* Hero + Nutrition Section */}
 			<section className="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-6 bg">
-				<div className="bg-white rounded-2xl shadow-md overflow-hidden">
+				<div className="bg-white rounded-2xl shadow-sm overflow-hidden">
 					{r.image && (
 						<img
 							src={r.image}
@@ -98,7 +113,7 @@ export default function RecipeDetailsPage() {
 				</div>
 
 				{/* Nutritional Information */}
-				<div className="bg-gradient-to-r from-cyan-50 to-cyan-100 shadow-lg rounded-2xl p-6 xl:p-8">
+				<div className="bg-gradient-to-r from-cyan-50 to-cyan-100 shadow-sm rounded-2xl p-6 xl:p-8">
 					<h4 className="font-bold text-2xl text-gray-800 mb-16 flex items-center gap-4">🥗 Nutritional Information</h4>
 					{r.nutrition_info ? (
 						<div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
@@ -136,7 +151,7 @@ export default function RecipeDetailsPage() {
 
 			{/* Ingredients */}
 			{Array.isArray(r.ingredients) && (
-				<section className="max-w-7xl mx-auto px-4 grid gap-6 mt-8 bg-white rounded-2xl shadow-md p-6">
+				<section className="max-w-7xl mx-auto px-4 grid gap-6 mt-8 bg-white rounded-2xl shadow-sm p-6">
 					<div className="grid md:grid-cols-2 gap-6">
 						<div className="max-w-4xl">
 							<h3 className="text-xl font-semibold mb-4">🛒 Ingredients</h3>
@@ -203,7 +218,7 @@ export default function RecipeDetailsPage() {
 				<div className="flex gap-6 overflow-x-auto pb-2">
 					{related?.results?.slice(0, 6)?.map(r => (
 						<div key={r.id} className="w-64 flex-shrink-0">
-							<RecipeCard {...r} />
+							<RecipeCard {...r} category={categoryMap.get(r.category)} />
 						</div>
 					))}
 				</div>

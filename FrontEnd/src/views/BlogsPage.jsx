@@ -4,6 +4,7 @@ import { listBlogs, listBlogCategories } from '../api/blogs'
 import Pagination from '../components/Pagination'
 import { getAccessToken } from '../api/client'
 import { useSearchParams } from 'react-router-dom'
+import Newsletter from '../components/Newsletter'
 
 export default function BlogsPage() {
 	const [page, setPage] = useState(1)
@@ -59,6 +60,7 @@ export default function BlogsPage() {
 				)}
 				<Pagination page={page} setPage={setPage} hasNext={Boolean(data?.next)} hasPrev={Boolean(data?.previous)} />
 			</section>
+			<Newsletter />
 		</>
 	)
 }
