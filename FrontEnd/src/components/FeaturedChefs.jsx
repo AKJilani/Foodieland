@@ -1,10 +1,10 @@
 export default function FeaturedChefs() {
 	const chefs = [
-		{ name: 'Jilani', role: 'Chef', img: 'https://images.unsplash.com/photo-1542181961-9590d0c79dab?q=80&w=400' },
-		{ name: 'Zareer', role: 'Baker', img: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=400' },
-		{ name: 'Faiyaz', role: 'Food Blogger', img: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=400' },
-		{ name: 'Shafayet', role: 'Food Reviewer', img: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=400' },
-		{ name: 'Al Amin', role: 'Recipe Expert', img: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=400' },
+		{ name: 'A.K.Jilani', role: 'Chef', img: 'src/assets/Jilani.jpg' },
+		{ name: 'Zareer', role: 'Baker', img: 'src/assets/Zareer.jpg' },
+		{ name: 'Faiyaz', role: 'Food Blogger', img: 'src/assets/Faiyaz.jpg' },
+		{ name: 'Shafayet', role: 'Food Reviewer', img: 'src/assets/Shafayet.jpg' },
+		{ name: 'Al Amin', role: 'Recipe Expert', img: 'src/assets/Al Amin.jpg' },
 	]
 	return (
 		<section className="max-w-6xl mx-auto px-4 py-12">
