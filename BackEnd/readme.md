@@ -23,88 +23,156 @@ python manage.py runserver
 ## OpenAPI docs
 - `GET /api/docs/`
 
-🔐 Auth & User
+### API Endpoints
+```
 
-POST /auth/register/ – Register
+Auth and Firebase Authentication
+==================================
+| Method | Endpoint                          | Description                         |
+| ------ | --------------------------------- | ----------------------------------- |
+| POST   | /api/auth/firebase-verify-email/  | Verify email using Firebase         |
+| GET    | /api/auth/me/                     | Get current authenticated user      |
+| PUT    | /api/auth/me/                     | Update authenticated user           |
+| PATCH  | /api/auth/me/                     | Partially update authenticated user |
+| POST   | /api/auth/register/               | Register a new user                 |
+| POST   | /api/auth/request-password-reset/ | Request password reset email        |
+| POST   | /api/auth/reset-password/         | Reset password                      |
+| POST   | /api/auth/token/                  | Get JWT token                       |
+| POST   | /api/auth/token/refresh/          | Refresh JWT token                   |
 
-POST /auth/token/ – JWT login
+Blogs
+====================
+| Method | Endpoint                               | Description           |
+| ------ | -------------------------------------- | --------------------- |
+| GET    | /api/blogs/blogs/                      | List all blogs        |
+| POST   | /api/blogs/blogs/                      | Create a new blog     |
+| GET    | /api/blogs/blogs/{id}/                 | Get blog by ID        |
+| PUT    | /api/blogs/blogs/{id}/                 | Replace blog by ID    |
+| PATCH  | /api/blogs/blogs/{id}/                 | Update blog partially |
+| DELETE | /api/blogs/blogs/{id}/                 | Delete blog           |
+| POST   | /api/blogs/blogs/{id}/increment\_view/ | Increment blog views  |
 
-POST /auth/token/refresh/ – Refresh token
+Categories
+====================
+| Method | Endpoint                          | Description               |
+| ------ | --------------------------------- | ------------------------- |
+| GET    | /api/blogs/blogs/categories/      | List all categories       |
+| POST   | /api/blogs/blogs/categories/      | Create a category         |
+| GET    | /api/blogs/blogs/categories/{id}/ | Get category by ID        |
+| PUT    | /api/blogs/blogs/categories/{id}/ | Replace category          |
+| PATCH  | /api/blogs/blogs/categories/{id}/ | Update category partially |
+| DELETE | /api/blogs/blogs/categories/{id}/ | Delete category           |
 
-GET /auth/me/ – Current user
+Comments
+====================
+| Method | Endpoint                        | Description              |
+| ------ | ------------------------------- | ------------------------ |
+| GET    | /api/blogs/blogs/comments/      | List all comments        |
+| POST   | /api/blogs/blogs/comments/      | Create a comment         |
+| GET    | /api/blogs/blogs/comments/{id}/ | Get comment by ID        |
+| PUT    | /api/blogs/blogs/comments/{id}/ | Replace comment          |
+| PATCH  | /api/blogs/blogs/comments/{id}/ | Update comment partially |
+| DELETE | /api/blogs/blogs/comments/{id}/ | Delete comment           |
 
-PUT /auth/me/ – Update user
+Contact-Message
+====================
+| Method | Endpoint                                       | Description              |
+| ------ | ---------------------------------------------- | ------------------------ |
+| GET    | /api/interactions/contact-messages/            | List contact messages    |
+| POST   | /api/interactions/contact-messages/            | Create a contact message |
+| GET    | /api/interactions/contact-messages/{id}/       | Get message by ID        |
+| PUT    | /api/interactions/contact-messages/{id}/       | Replace message          |
+| PATCH  | /api/interactions/contact-messages/{id}/       | Update message partially |
+| DELETE | /api/interactions/contact-messages/{id}/       | Delete message           |
+| POST   | /api/interactions/contact-messages/{id}/reply/ | Reply to a message       |
 
-PATCH /auth/me/ – Partial update
+Contact-US
+===============
 
-POST /auth/firebase-verify-email/ – Verify email
+| Method | Endpoint                           | Description                 |
+| ------ | ---------------------------------- | --------------------------- |
+| GET    | /api/interactions/contact-us/      | List contact-us submissions |
+| POST   | /api/interactions/contact-us/      | Create a submission         |
+| GET    | /api/interactions/contact-us/{id}/ | Get submission by ID        |
+| PUT    | /api/interactions/contact-us/{id}/ | Replace submission          |
+| PATCH  | /api/interactions/contact-us/{id}/ | Update submission partially |
+| DELETE | /api/interactions/contact-us/{id}/ | Delete submission           |
 
-POST /auth/request-password-reset/ – Request reset
+Follows
+==========
+| Method | Endpoint                            | Description             |
+| ------ | ----------------------------------- | ----------------------- |
+| GET    | /api/interactions/follows/          | List all follows        |
+| POST   | /api/interactions/follows/          | Create a follow         |
+| GET    | /api/interactions/follows/{id}/     | Get follow by ID        |
+| PUT    | /api/interactions/follows/{id}/     | Replace follow          |
+| PATCH  | /api/interactions/follows/{id}/     | Update follow partially |
+| DELETE | /api/interactions/follows/{id}/     | Delete follow           |
+| POST   | /api/interactions/follows/unfollow/ | Unfollow a user         |
 
-POST /auth/reset-password/ – Reset password
+Newsletter
+==========
 
-🥘 Recipes
+| Method | Endpoint                           | Description                     |
+| ------ | ---------------------------------- | ------------------------------- |
+| GET    | /api/interactions/newsletter/      | List all newsletter subscribers |
+| POST   | /api/interactions/newsletter/      | Subscribe to newsletter         |
+| GET    | /api/interactions/newsletter/{id}/ | Get subscriber by ID            |
+| PUT    | /api/interactions/newsletter/{id}/ | Replace subscriber              |
+| PATCH  | /api/interactions/newsletter/{id}/ | Update subscriber partially     |
+| DELETE | /api/interactions/newsletter/{id}/ | Delete subscriber               |
 
-GET /recipes/ – List recipes
+Useres
+==========
 
-POST /recipes/ – Create recipe
+| Method | Endpoint                      | Description    |
+| ------ | ----------------------------- | -------------- |
+| GET    | /api/interactions/users/      | List all users |
+| GET    | /api/interactions/users/{id}/ | Get user by ID |
 
-GET/PUT/PATCH/DELETE /recipes/{id}/ – Recipe detail
+Recipes
+==========
 
-GET/POST /recipes/categories/ – List/create category
+| Method | Endpoint           | Description             |
+| ------ | ------------------ | ----------------------- |
+| GET    | /api/recipes/      | List all recipes        |
+| POST   | /api/recipes/      | Create a recipe         |
+| GET    | /api/recipes/{id}/ | Get recipe by ID        |
+| PUT    | /api/recipes/{id}/ | Replace recipe          |
+| PATCH  | /api/recipes/{id}/ | Update recipe partially |
+| DELETE | /api/recipes/{id}/ | Delete recipe           |
 
-GET/PUT/PATCH/DELETE /recipes/categories/{id}/ – Category detail
+Categories
+==========
 
-User-specific
+| Method | Endpoint                      | Description                |
+| ------ | ----------------------------- | -------------------------- |
+| GET    | /api/recipes/categories/      | List all recipe categories |
+| POST   | /api/recipes/categories/      | Create a category          |
+| GET    | /api/recipes/categories/{id}/ | Get category by ID         |
+| PUT    | /api/recipes/categories/{id}/ | Replace category           |
+| PATCH  | /api/recipes/categories/{id}/ | Update category partially  |
+| DELETE | /api/recipes/categories/{id}/ | Delete category            |
 
-GET /recipes/my/favorites/ – My favorites
+Favorites
+==========
 
-POST /recipes/my/favorites/ – Add favorite
+| Method | Endpoint                        | Description               |
+| ------ | ------------------------------- | ------------------------- |
+| GET    | /api/recipes/my/favorites/      | List my favorite recipes  |
+| POST   | /api/recipes/my/favorites/      | Add recipe to favorites   |
+| GET    | /api/recipes/my/favorites/{id}/ | Get favorite by ID        |
+| PUT    | /api/recipes/my/favorites/{id}/ | Replace favorite          |
+| PATCH  | /api/recipes/my/favorites/{id}/ | Update favorite partially |
+| DELETE | /api/recipes/my/favorites/{id}/ | Remove from favorites     |
 
-DELETE /recipes/my/favorites/{id}/ – Remove favorite
-
-GET /recipes/my/ratings/ – My ratings
-
-POST /recipes/my/ratings/ – Add rating
-
-DELETE /recipes/my/ratings/{id}/ – Remove rating
-
-📝 Blogs
-
-GET/POST /blogs/blogs/ – List/create blogs
-
-GET/PUT/PATCH/DELETE /blogs/blogs/{id}/ – Blog detail
-
-POST /blogs/blogs/{id}/increment_view/ – Increment view
-
-GET/POST /blogs/categories/ – List/create categories
-
-GET/PUT/PATCH/DELETE /blogs/categories/{id}/ – Category detail
-
-💬 Blog Comments
-
-GET/POST /blogs/comments/ – List/add comment
-
-GET/PUT/PATCH/DELETE /blogs/comments/{id}/ – Comment detail
-
-🤝 Interactions
-
-GET/POST /interactions/contact-messages/ – Personal messages
-
-POST /interactions/contact-messages/{id}/reply/ – Reply to message
-
-GET/POST /interactions/contact-us/ – Contact Us messages
-
-GET/POST /interactions/follows/ – Follow users
-
-POST /interactions/follows/unfollow/ – Unfollow
-
-GET/POST /interactions/newsletter/ – Subscribe newsletter
-
-GET /interactions/users/ – List all users
-
-✅ Users (Read-only)
-
-GET /users/ – List users
-
-GET /users/{id}/ – User detail
+Ratings
+==========
+| Method | Endpoint                      | Description             |
+| ------ | ----------------------------- | ----------------------- |
+| GET    | /api/recipes/my/ratings/      | List my ratings         |
+| POST   | /api/recipes/my/ratings/      | Add a rating            |
+| GET    | /api/recipes/my/ratings/{id}/ | Get rating by ID        |
+| PUT    | /api/recipes/my/ratings/{id}/ | Replace rating          |
+| PATCH  | /api/recipes/my/ratings/{id}/ | Update rating partially |
+| DELETE | /api/recipes/my/ratings/{id}/ | Delete rating           |
