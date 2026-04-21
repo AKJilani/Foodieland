@@ -7,5 +7,3 @@ export default function Pagination({ page, setPage, hasNext, hasPrev }) {
 		</div>
 	)
 }
-
-
