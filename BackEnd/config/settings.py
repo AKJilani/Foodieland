@@ -71,9 +71,18 @@ ASGI_APPLICATION = "config.asgi.application"
 # 	}
 # }
 
+# Database — Supabase PostgreSQL
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT', '5432'),
+    }
 }
+
 
 AUTH_USER_MODEL = "users.User"
 
@@ -106,18 +115,14 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
 
-# STATIC_URL = "static/"
-# STATIC_ROOT = BASE_DIR / "staticfiles"
-
+# Static files
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-
 
 # JWT
 SIMPLE_JWT = {
@@ -127,11 +132,12 @@ SIMPLE_JWT = {
 	"AUTH_HEADER_TYPES": ("Bearer",),
 }
 
-# CORS (simple manual allowlist)
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    os.environ.get('FRONTEND_URL', 'https://foodieland-front-end-git-main-akjilani007s-projects.vercel.app'),
+]
 
 SITE_URL = "http://localhost"
-FRONTEND_URL = "http://localhost:5173"
+FRONTEND_URL = "https://foodieland-front-end-git-main-akjilani007s-projects.vercel.app"
 
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
