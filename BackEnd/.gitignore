@@ -28,10 +28,6 @@ __pycache__/
 .env
 venv/
 
-# Django
-staticfiles/
-media/
-
 # System
 .DS_Store
 Thumbs.db
