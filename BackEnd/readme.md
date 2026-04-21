@@ -1,131 +1,27 @@
-# FoodieLand 🍳
+# FoodieLand API (Django + DRF)
 
-A modern, full-stack community-driven platform where food enthusiasts can share recipes, write culinary blogs, and connect with fellow cooking lovers. Built with Django REST Framework backend and React frontend.
+Community-driven recipes and blogs platform API.
 
-## 🌟 Key Features
-
-### 🔐 User Authentication & Security
-- **Multi-platform Registration**: Email/password and social media login (Google, Facebook)
-- **Email Verification**: Secure account activation process
-- **Password Recovery**: Forgot password functionality with email reset
-- **Form Validation**: Comprehensive client and server-side validation
-- **Security**: JWT token-based authentication with secure password hashing
-
-### 🏠 Dynamic Home Experience
-- **Interactive Navigation**: Seamless navigation between recipes, blogs, and profiles
-- **Hero Slider**: Dynamically showcased featured recipes from database
-- **Category Filtering**: Smart recipe categorization with real-time filtering
-- **Recipe Discovery**: Grid-based recipe browsing with thumbnails and ratings
-- **Featured Chefs**: Spotlight on community contributors
-
-### 📖 Recipe Management
-- **Detailed Recipe Views**: Complete ingredient lists, step-by-step instructions
-- **Recipe Creation**: Intuitive form for adding new recipes with image upload
-- **Author Profiles**: Direct links to chef profiles and their other recipes
-- **Smart Recommendations**: "You May Also Like" suggestions based on categories
-- **User-Generated Content**: Community-driven recipe database
-
-### ✍️ Blogging Platform
-- **Rich Content Creation**: Full-featured blog post editor with image support
-- **Content Discovery**: Browse all blogs with filtering and search capabilities
-- **Sidebar Navigation**: Recent posts and category-based browsing
-- **Author Attribution**: Full author profiles and related content linking
-
-### 👤 User Profiles & Communication
-- **Profile Management**: Editable user profiles with bio and profile pictures
-- **Content Portfolio**: View all user's recipes and blog posts
-- **Messaging System**: Contact form integration with user message inbox
-- **Account Control**: Profile editing and account deletion options
-
-## 🛠️ Technology Stack
-
-### Backend
-- **Framework**: Django 4.x with Django REST Framework
-- **Database**: SQLite (configurable)
-- **Authentication**: JWT tokens with social auth integration
-- **Media Storage**: Django file handling with cloud storage support
-- **API Design**: RESTful API architecture
-
-### Frontend
-- **Framework**: React 18+ with modern hooks
-- **Styling**: CSS3/SCSS with responsive design
-- **State Management**: React Context API and local state
-- **HTTP Client**: Axios for API communication
-- **Routing**: React Router for SPA navigation
-
-### Development Tools
-- **Version Control**: Git with feature branch workflow
-- **Package Management**: npm/yarn and pip
-
-## 🚀 Getting Started
-
-### Prerequisites
-```bash
-- Python 3.8+
-- Node.js 16+
--  SQLite
+## Quick start (local)
+- Create virtualenv and install deps
 ```
-
-### Backend Setup
-```bash
-# Clone the repository
-git clone https://github.com/AKJilani/Foodieland_Backend.git
-cd foodieland
-
-# Create virtual environment
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-
-# Install dependencies
+./venv/Scripts/activate  # PowerShell
 pip install -r requirements.txt
-
-# Database setup
-python manage.py makemigrations
+```
+- Configure env
+```
+copy .env.example .env  # set SMTP later for real emails
+```
+- Run
+```
 python manage.py migrate
-
-# Create superuser (optional)
 python manage.py createsuperuser
-
-# Run development server
 python manage.py runserver
 ```
 
-### Frontend Setup
-```bash
-# Navigate to frontend directory
-cd frontend
-
-# Install dependencies
-npm install
-
-# Start development server
-npm start
-```
-
-## 📱 User Access Levels
-
-### Public Users (No Authentication Required)
-- Browse and view all recipes
-- Read all blog posts
-- View chef profiles
-- Access contact information
-
-### Authenticated Users
-- Create, edit, and delete personal recipes
-- Write, edit, and delete blog posts
-- Edit profile information
-- Upload and manage media files
-- Receive and manage contact messages
-- Full account management
-
-## 🎯 Project Architecture
-
-### Database Schema
-- **User Model**: Extended Django user with profile fields
-- **Recipe Model**: Title, description, ingredients, steps, category, author
-- **Blog Model**: Title, content, author, publication date, featured image
-- **Category Model**: Recipe categorization system
-- **Message Model**: Contact form submissions linked to users
+## OpenAPI docs
+- `GET /api/docs/`
 
 ### API Endpoints
 ```
@@ -280,72 +176,3 @@ Ratings
 | PUT    | /api/recipes/my/ratings/{id}/ | Replace rating          |
 | PATCH  | /api/recipes/my/ratings/{id}/ | Update rating partially |
 | DELETE | /api/recipes/my/ratings/{id}/ | Delete rating           |
-
-
-
-```
-
-## 🎨 UI/UX Features
-
-- **Responsive Design**: Mobile-first approach with cross-device compatibility
-- **Interactive Elements**: Hover effects, smooth transitions, and loading states
-- **Image Optimization**: Automatic image compression and lazy loading
-- **Search & Filter**: Real-time recipe and blog search functionality
-- **Social Integration**: Easy sharing and social media connectivity
-
-## 🔒 Security Features
-
-- **Input Sanitization**: XSS prevention and SQL injection protection
-- **CSRF Protection**: Django's built-in CSRF middleware
-- **Rate Limiting**: API endpoint protection against abuse
-- **Secure File Upload**: File type validation and secure storage
-- **Password Security**: Bcrypt hashing with strength requirements
-
-## 📈 Performance Optimizations
-
-- **Database Optimization**: Efficient queries with select_related and prefetch_related
-- **Caching Strategy**: Redis integration for frequently accessed data
-- **Image Processing**: Automatic thumbnail generation and optimization
-- **Code Splitting**: React lazy loading for improved initial load times
-- **API Pagination**: Efficient large dataset handling
-
-
-## 📊 Project Statistics
-
-- **Backend**: Django models with comprehensive relationships
-- **Frontend**: React components with modern hooks
-- **API Endpoints**: RESTful endpoints
-- **Authentication**: Multi-provider auth integration
-- **Database**: Normalized schema with optimized queries
-- **Testing**: Unit and integration test coverage
-
-## 🤝 Contributing
-
-This is a demonstration project showcasing full-stack development skills. The codebase follows industry best practices and is structured for scalability and maintainability.
-
-## 📄 License
-
-This project is created for educational and portfolio demonstration purposes.
-
-## 👨‍💻 Developer
-
-1. Abdul Kader Jilani (Leader)
-2. Khandakar Zareer
-3. Faiyaz Mahmud
-4. Shafayet Salehin
-5. Al Amin
-
-
----
-
-*Built with ❤️ using Django, React, and modern web technologies*
-
-## 📞 Contact
-
-For any inquiries about this project:
-- **Email**: [akjilani691995@gmail.com]
-- **LinkedIn**: [https://www.linkedin.com/in/abdul-kader-jilani-67b04a165/]
-
----
-
-**Note**: This project demonstrates proficiency in full-stack development, RESTful API design, modern frontend frameworks, user authentication, database design, and deployment-ready application architecture.
