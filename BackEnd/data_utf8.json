@@ -1,0 +1,1297 @@
+[
+{
+  "model": "sessions.session",
+  "pk": "t4dagwa34gu73rirlmqxgkfte2aeyzta",
+  "fields": {
+    "session_data": ".eJxVzDsOwjAQRdG9uMZWYo8_Q0nPGqIZj00CKJHyqRB7h0gpoH73vJfqaFv7blvK3A2izspiZW8z6yCYNWAkjV6cdm2qnnOywlmdfhlTfpRxt3Kn8TaZPI3rPLDZE3Osi7lOUp6Xo_076GnpvzoSWXAeBYOAQMyQoLbSRMacmhicgEcPNXkCEOeb0FYqDJXYFoei3h8lKUFj:1usEE8:eLutqgPQ3cbeQrk6FgDdKUUB9tHkm9wFj3Skve-MVuA",
+    "expire_date": "2025-09-13T05:34:12.644Z"
+  }
+},
+{
+  "model": "recipes.recipecategory",
+  "pk": "0527bc49-d9c7-4bca-8668-70c05b43383b",
+  "fields": {
+    "name": "Lunch",
+    "description": "",
+    "icon": "category/Lunch.png",
+    "color": "#fcffc1",
+    "recipe_count": 1,
+    "created_at": "2025-08-30T06:10:38.996Z"
+  }
+},
+{
+  "model": "recipes.recipecategory",
+  "pk": "20dea1a1-65ea-4a2e-b6c4-5f82aa412358",
+  "fields": {
+    "name": "Dinner",
+    "description": "",
+    "icon": "category/Dinner.png",
+    "color": "#dfebed",
+    "recipe_count": 3,
+    "created_at": "2025-08-30T06:11:52.064Z"
+  }
+},
+{
+  "model": "recipes.recipecategory",
+  "pk": "281a145f-1c93-4172-94a5-793ab5e9af37",
+  "fields": {
+    "name": "Fastfood",
+    "description": "",
+    "icon": "category/Fastfood.png",
+    "color": "#f6eedf",
+    "recipe_count": 1,
+    "created_at": "2025-08-30T06:12:04.595Z"
+  }
+},
+{
+  "model": "recipes.recipecategory",
+  "pk": "8752d123-75be-4fad-9e28-366e388311f9",
+  "fields": {
+    "name": "Breakfast",
+    "description": "",
+    "icon": "category/Breakfast.png",
+    "color": "#edb1f1",
+    "recipe_count": 1,
+    "created_at": "2025-08-30T06:09:07.524Z"
+  }
+},
+{
+  "model": "recipes.recipecategory",
+  "pk": "b9531856-908e-4b34-a16b-7590cf4e7af4",
+  "fields": {
+    "name": "Dessert",
+    "description": "",
+    "icon": "category/Dessert.png",
+    "color": "#ffaaa5",
+    "recipe_count": 2,
+    "created_at": "2025-08-30T06:10:27.519Z"
+  }
+},
+{
+  "model": "recipes.recipecategory",
+  "pk": "c306daeb-01dc-4def-8e1e-b45142a82f9e",
+  "fields": {
+    "name": "Vegan",
+    "description": "",
+    "icon": "category/Vegan.png",
+    "color": "#a2a8d3",
+    "recipe_count": 3,
+    "created_at": "2025-08-30T06:09:29.839Z"
+  }
+},
+{
+  "model": "recipes.recipecategory",
+  "pk": "cac335bb-a61c-451d-9372-57f017e83a76",
+  "fields": {
+    "name": "Meat",
+    "description": "",
+    "icon": "category/Meat.png",
+    "color": "#ffb5b5",
+    "recipe_count": 1,
+    "created_at": "2025-08-30T06:10:08.484Z"
+  }
+},
+{
+  "model": "recipes.recipecategory",
+  "pk": "d6a8833e-8a6e-4a94-b54c-3a0a2fd222f7",
+  "fields": {
+    "name": "Chocolate",
+    "description": "",
+    "icon": "category/Chocolate.png",
+    "color": "#bbded6",
+    "recipe_count": 1,
+    "created_at": "2025-08-30T06:11:38.390Z"
+  }
+},
+{
+  "model": "blogs.blogcategory",
+  "pk": "0ecf541c-73c4-4f69-be42-6ea58abb39e1",
+  "fields": {
+    "name": "Dessert",
+    "description": "",
+    "color": "#ffaaa5",
+    "blog_count": 1,
+    "created_at": "2025-08-30T06:32:59.210Z"
+  }
+},
+{
+  "model": "blogs.blogcategory",
+  "pk": "1f4db9bb-40ab-48b8-8b49-3581b018495f",
+  "fields": {
+    "name": "Dinner",
+    "description": "",
+    "color": "#dfebed",
+    "blog_count": 2,
+    "created_at": "2025-08-30T06:33:18.824Z"
+  }
+},
+{
+  "model": "blogs.blogcategory",
+  "pk": "322c9b2d-e68d-4186-b3bb-7ed89b280029",
+  "fields": {
+    "name": "Meat",
+    "description": "",
+    "color": "#ffb5b5",
+    "blog_count": 1,
+    "created_at": "2025-08-30T06:32:52.177Z"
+  }
+},
+{
+  "model": "blogs.blogcategory",
+  "pk": "727f7c53-bf32-4986-a318-d529a96f529d",
+  "fields": {
+    "name": "Fastfood",
+    "description": "",
+    "color": "#f6eedf",
+    "blog_count": 1,
+    "created_at": "2025-08-30T06:33:24.358Z"
+  }
+},
+{
+  "model": "blogs.blogcategory",
+  "pk": "a031e74b-9ed9-412f-94b4-222cdd2a2cff",
+  "fields": {
+    "name": "Lunch",
+    "description": "",
+    "color": "#fcffc1",
+    "blog_count": 1,
+    "created_at": "2025-08-30T06:33:06.879Z"
+  }
+},
+{
+  "model": "blogs.blogcategory",
+  "pk": "c6984548-73de-4361-b969-923f31f021d0",
+  "fields": {
+    "name": "Chocolate",
+    "description": "",
+    "color": "#bbded6",
+    "blog_count": 1,
+    "created_at": "2025-08-30T06:33:12.951Z"
+  }
+},
+{
+  "model": "blogs.blogcategory",
+  "pk": "d22deab4-9375-43d5-815d-a1a81f252ded",
+  "fields": {
+    "name": "Vegan",
+    "description": "",
+    "color": "#a2a8d3",
+    "blog_count": 1,
+    "created_at": "2025-08-30T06:32:42.208Z"
+  }
+},
+{
+  "model": "blogs.blogcategory",
+  "pk": "e75c625e-4046-4621-82be-7afa25ce4054",
+  "fields": {
+    "name": "Breakfast",
+    "description": "",
+    "color": "#edb1f1",
+    "blog_count": 1,
+    "created_at": "2025-08-30T06:32:27.179Z"
+  }
+},
+{
+  "model": "interactions.newsletter",
+  "pk": "935a6359-29d7-422c-bd0f-7131593202f8",
+  "fields": {
+    "email": "akjilani691995@gmail.com",
+    "created_at": "2025-08-30T10:59:25.490Z"
+  }
+},
+{
+  "model": "interactions.contactusmessage",
+  "pk": "21d02767-e31b-4b90-93e7-04158706499e",
+  "fields": {
+    "name": "Akjilani",
+    "email": "Akjilani691995@gmail.com",
+    "subject": "Want to Learn Recipe",
+    "enquiry_type": "general",
+    "message": "Hello, Help me",
+    "created_at": "2025-08-30T10:59:08.406Z"
+  }
+},
+{
+  "model": "interactions.contactusmessage",
+  "pk": "6afe8250-fe12-467f-8ae6-0044d12252df",
+  "fields": {
+    "name": "ak3",
+    "email": "ak3@gmail.com",
+    "subject": "test3",
+    "enquiry_type": "feedback",
+    "message": "Hello",
+    "created_at": "2025-08-30T12:19:16.287Z"
+  }
+},
+{
+  "model": "interactions.contactusmessage",
+  "pk": "6b467542-a38e-4d84-b858-81d4b30db39c",
+  "fields": {
+    "name": "ak2",
+    "email": "ak2@gmail.com",
+    "subject": "Test",
+    "enquiry_type": "support",
+    "message": "I need support",
+    "created_at": "2025-08-30T12:10:17.149Z"
+  }
+},
+{
+  "model": "users.user",
+  "fields": {
+    "password": "pbkdf2_sha256$720000$jP2kDnESxXR6DLCJFgjVmn$PPg/aeVHsFr6GaHf3PzwLoVIyM9EaeDSCDKN+MHSnBk=",
+    "last_login": "2025-08-30T05:34:12.638Z",
+    "is_superuser": true,
+    "name": "",
+    "email": "ak@gmail.com",
+    "profile_picture": "",
+    "bio": null,
+    "is_email_verified": false,
+    "email_verification_token": null,
+    "password_reset_token": null,
+    "password_reset_expires": null,
+    "is_active": true,
+    "is_staff": true,
+    "created_at": "2025-08-30T05:32:47.548Z",
+    "updated_at": "2025-08-30T05:32:47.548Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "fields": {
+    "password": "pbkdf2_sha256$720000$0vDV3FVtIZdi81Wf6dsqav$cLBh9SdfunX+Hho/XDTDa3sDclzD+2r6e2klBqB4Wdw=",
+    "last_login": null,
+    "is_superuser": false,
+    "name": "Akjilani_1",
+    "email": "akjilani691995@gmail.com",
+    "profile_picture": "profiles/akjilani_l1SijQA.jpg",
+    "bio": "Full-stack developer skilled in Python, Flask, Django, React, and chart.js. Experienced with MSSQL, MySQL, and PostgreSQL, specializing in SaaS, LMS, and POS solutions. Proficient in Power BI, MS Access, and Adobe tools, delivering efficient, user-friendly, and innovative applications",
+    "is_email_verified": true,
+    "email_verification_token": null,
+    "password_reset_token": null,
+    "password_reset_expires": null,
+    "is_active": true,
+    "is_staff": false,
+    "created_at": "2025-08-30T05:18:00.250Z",
+    "updated_at": "2025-08-30T11:00:06.266Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "fields": {
+    "password": "pbkdf2_sha256$720000$RvJGW204Qea2VGoQiYrElX$Lc6fHfINK/aSvE93WfxUTGL4z1hKWjQMl0pvIW+wIZU=",
+    "last_login": null,
+    "is_superuser": false,
+    "name": "Akjilani_2",
+    "email": "akjilani.testapplication@gmail.com",
+    "profile_picture": "profiles/30KB_Pic.jpg",
+    "bio": "Full-stack developer skilled in Python, Flask, Django, React, and chart.js. Experienced with MSSQL, MySQL, and PostgreSQL, specializing in SaaS, LMS, and POS solutions. Proficient in Power BI, MS Access, and Adobe tools, delivering efficient, user-friendly, and innovative applications.414",
+    "is_email_verified": true,
+    "email_verification_token": null,
+    "password_reset_token": null,
+    "password_reset_expires": null,
+    "is_active": true,
+    "is_staff": false,
+    "created_at": "2025-08-30T05:19:10.508Z",
+    "updated_at": "2025-09-01T05:02:37.401Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": "056e02f0-8426-44a0-9326-635aa9327647",
+  "fields": {
+    "title": "Veggie Wrap fresh",
+    "description": "Healthy wrap with fresh vegetables, hummus, and spices, perfect for lunch or light dinner.",
+    "prepTime": "30 minutes",
+    "nutrition_info": {
+      "calories": "258",
+      "carbohydrates": "159",
+      "cholesterol": "458",
+      "protein": "351",
+      "fat": "452",
+      "fiber": "157"
+    },
+    "image": "recipes/food-31.png",
+    "ingredients": [
+      "Tortilla",
+      "Lettuce",
+      "Tomato",
+      "Cucumber",
+      "Hummus"
+    ],
+    "preparation_steps": [
+      "Spread hummus evenly over tortilla wrap",
+      "Layer lettuce, tomato, and cucumber slices",
+      "Roll tortilla tightly ensuring filling stays intact",
+      "Cut wrap into halves for easy serving",
+      "Serve immediately with sauce or dressing"
+    ],
+    "category": "20dea1a1-65ea-4a2e-b6c4-5f82aa412358",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "average_rating": "0.00",
+    "total_ratings": 0,
+    "is_featured": false,
+    "created_at": "2025-08-30T09:57:24.134Z",
+    "updated_at": "2025-08-30T13:39:46.762Z"
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": "1a6004bd-30e7-420d-a14f-bd23d9648e78",
+  "fields": {
+    "title": "Avocado Toast",
+    "description": "Creamy avocado spread on toasted bread, topped with spices and lemon juice for a quick breakfast.",
+    "prepTime": "29 minutes",
+    "nutrition_info": {
+      "calories": "50",
+      "carbohydrates": "40",
+      "cholesterol": "30",
+      "protein": "20",
+      "fat": "400",
+      "fiber": "500"
+    },
+    "image": "recipes/food-4.png",
+    "ingredients": [
+      "Bread slices",
+      "Ripe avocado",
+      "Lemon juice",
+      "Salt",
+      "Pepper"
+    ],
+    "preparation_steps": [
+      "Toast bread slices until golden and crisp",
+      "Mash avocado with lemon juice and seasoning",
+      "Spread mashed avocado evenly over toast",
+      "Sprinkle salt and pepper on top",
+      "Serve immediately for best flavor and texture"
+    ],
+    "category": "0527bc49-d9c7-4bca-8668-70c05b43383b",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "average_rating": "0.00",
+    "total_ratings": 0,
+    "is_featured": false,
+    "created_at": "2025-08-30T09:49:15.795Z",
+    "updated_at": "2025-08-30T13:39:36.391Z"
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": "275fbc22-e6b2-4559-8f02-9514f10e9236",
+  "fields": {
+    "title": "Banana Pancakes",
+    "description": "Soft pancakes flavored with ripe bananas and cinnamon, perfect for breakfast or brunch.",
+    "prepTime": "18 minutes",
+    "nutrition_info": {
+      "calories": "450",
+      "carbohydrates": "451",
+      "cholesterol": "254",
+      "protein": "578",
+      "fat": "415",
+      "fiber": "465"
+    },
+    "image": "recipes/food-26.png",
+    "ingredients": [
+      "Flour",
+      "Banana",
+      "Milk",
+      "Eggs",
+      "Cinnamon"
+    ],
+    "preparation_steps": [
+      "Mash bananas and mix with eggs carefully",
+      "Add flour, milk, and cinnamon slowly",
+      "Heat pan and pour batter evenly",
+      "Cook until golden and flip carefully",
+      "Serve with syrup or fresh fruit topping"
+    ],
+    "category": "b9531856-908e-4b34-a16b-7590cf4e7af4",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "average_rating": "5.00",
+    "total_ratings": 1,
+    "is_featured": false,
+    "created_at": "2025-08-30T09:59:13.097Z",
+    "updated_at": "2025-08-30T13:39:27.659Z"
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": "4d28f645-37fc-4b09-91a3-0f4ffc6da85a",
+  "fields": {
+    "title": "Spinach Omelette",
+    "description": "Fluffy omelette with fresh spinach and aromatic herbs, perfect for a quick healthy breakfast or brunch meal.",
+    "prepTime": "10 minutes",
+    "nutrition_info": {
+      "calories": "250",
+      "carbohydrates": "350",
+      "cholesterol": "450",
+      "protein": "120",
+      "fat": "200",
+      "fiber": "500"
+    },
+    "image": "recipes/article-8.png",
+    "ingredients": [
+      "Eggs",
+      "Fresh spinach",
+      "Salt",
+      "Pepper",
+      "Cheese",
+      "Lemon",
+      "Vegetables"
+    ],
+    "preparation_steps": [
+      "Whisk eggs with salt and pepper gently.",
+      "Heat pan and melt butter until sizzling.",
+      "Add spinach and cook until slightly wilted.",
+      "Pour eggs and cook until lightly golden",
+      "Sprinkle cheese and fold omelette carefully"
+    ],
+    "category": "8752d123-75be-4fad-9e28-366e388311f9",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "average_rating": "0.00",
+    "total_ratings": 0,
+    "is_featured": false,
+    "created_at": "2025-08-30T08:02:22.733Z",
+    "updated_at": "2025-08-30T13:39:20.387Z"
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": "51dcdc71-93c0-446c-93cd-2320d75c8055",
+  "fields": {
+    "title": "Berry Smoothie",
+    "description": "Refreshing smoothie made with mixed berries, yogurt, and honey, perfect for breakfast or a healthy snack.",
+    "prepTime": "20 minutes",
+    "nutrition_info": {
+      "calories": "40",
+      "carbohydrates": "50",
+      "cholesterol": "60",
+      "protein": "70",
+      "fat": "80",
+      "fiber": "90"
+    },
+    "image": "recipes/food-11.png",
+    "ingredients": [
+      "Mixed berries",
+      "Yogurt",
+      "Honey",
+      "Milk"
+    ],
+    "preparation_steps": [
+      "Add berries and yogurt into blender jug",
+      "Pour milk and honey over mixture carefully",
+      "Blend until smooth and creamy texture achieved",
+      "Pour into glass and serve immediately chilled",
+      "Enjoy fresh for best taste and nutrition"
+    ],
+    "category": "281a145f-1c93-4172-94a5-793ab5e9af37",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "average_rating": "0.00",
+    "total_ratings": 0,
+    "is_featured": false,
+    "created_at": "2025-08-30T09:55:11.152Z",
+    "updated_at": "2025-08-30T13:39:13.250Z"
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": "5507dd29-08b0-455c-a615-3edbf5c2ab26",
+  "fields": {
+    "title": "Beef Stir Fry",
+    "description": "Quick beef stir fry with colorful vegetables, served with soy sauce for a fast, delicious dinner.",
+    "prepTime": "55 minutes",
+    "nutrition_info": {
+      "calories": "44",
+      "carbohydrates": "66",
+      "cholesterol": "510",
+      "protein": "521",
+      "fat": "546",
+      "fiber": "1002"
+    },
+    "image": "recipes/food-24.png",
+    "ingredients": [
+      "Beef strips",
+      "Bell peppers",
+      "Soy sauce",
+      "Garlic",
+      "Onion"
+    ],
+    "preparation_steps": [
+      "Heat oil in wok until very hot",
+      "Add garlic and onions, stir fry lightly",
+      "Toss beef strips until brown and cooked",
+      "Add bell peppers and stir for few minutes",
+      "Pour soy sauce, mix well, serve hot"
+    ],
+    "category": "cac335bb-a61c-451d-9372-57f017e83a76",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "average_rating": "0.00",
+    "total_ratings": 0,
+    "is_featured": false,
+    "created_at": "2025-08-30T09:52:11.397Z",
+    "updated_at": "2025-08-30T13:38:55.451Z"
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": "b261402f-b1ec-4d19-9558-bfda8488b26b",
+  "fields": {
+    "title": "Chocolate Mug Cake",
+    "description": "Quick chocolate cake prepared in a mug, perfect for an instant dessert craving.",
+    "prepTime": "40 minutes",
+    "nutrition_info": {
+      "calories": "452",
+      "carbohydrates": "458",
+      "cholesterol": "548",
+      "protein": "612",
+      "fat": "456",
+      "fiber": "450"
+    },
+    "image": "recipes/food-9_dneGdot.png",
+    "ingredients": [
+      "Flour",
+      "Cocoa powder",
+      "Sugar",
+      "Milk",
+      "Butter"
+    ],
+    "preparation_steps": [
+      "Mix flour, cocoa, and sugar in mug",
+      "Add milk and butter, stir until smooth",
+      "Microwave for two minutes until fully cooked",
+      "Let cool slightly before enjoying warm",
+      "Serve immediately with optional chocolate syrup"
+    ],
+    "category": "b9531856-908e-4b34-a16b-7590cf4e7af4",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "average_rating": "5.00",
+    "total_ratings": 1,
+    "is_featured": false,
+    "created_at": "2025-08-30T10:04:11.289Z",
+    "updated_at": "2025-08-30T13:38:44.710Z"
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": "be1d3c75-23a0-4184-ad9d-e6d3d06da749",
+  "fields": {
+    "title": "Quinoa Salad",
+    "description": "A nutritious quinoa salad, mixed with fresh vegetables and a light lemon dressing, is a refreshing and wholesome meal.",
+    "prepTime": "15 minutes",
+    "nutrition_info": {
+      "calories": "200",
+      "carbohydrates": "350",
+      "cholesterol": "450",
+      "protein": "150",
+      "fat": "205",
+      "fiber": "502"
+    },
+    "image": "recipes/food-7.png",
+    "ingredients": [
+      "Quinoa",
+      "Cherry tomatoes",
+      "Cucumber",
+      "Lemon juice",
+      "Olive oil",
+      "Vegetables",
+      "Pink Salt"
+    ],
+    "preparation_steps": [
+      "Cook quinoa until fluffy and let cool.",
+      "Chop vegetables evenly and prepare lemon dressing.",
+      "Mix the vegetables and quinoa thoroughly.",
+      "Pour dressing over salad and toss gently.",
+      "Serve chilled for maximum freshness and flavor."
+    ],
+    "category": "c306daeb-01dc-4def-8e1e-b45142a82f9e",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "average_rating": "0.00",
+    "total_ratings": 0,
+    "is_featured": false,
+    "created_at": "2025-08-30T08:28:15.106Z",
+    "updated_at": "2025-08-30T13:38:35.036Z"
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": "ce003cb1-6031-492d-bb40-b80912592514",
+  "fields": {
+    "title": "Honey Glazed Chicken",
+    "description": "Tender chicken pieces coated in sweet honey glaze, baked to perfection for a flavorful dinner experience.",
+    "prepTime": "75 minutes",
+    "nutrition_info": {
+      "calories": "50",
+      "carbohydrates": "70",
+      "cholesterol": "90",
+      "protein": "110",
+      "fat": "125",
+      "fiber": "257"
+    },
+    "image": "recipes/food-17.png",
+    "ingredients": [
+      "Chicken breast",
+      "Honey",
+      "Soy sauce",
+      "Garlic",
+      "Pink Salt",
+      "Vegetables",
+      "Garlic Sauce"
+    ],
+    "preparation_steps": [
+      "Preheat oven and prepare chicken pieces",
+      "Mix honey, garlic, and soy sauce well",
+      "Brush glaze generously over chicken pieces",
+      "Bake chicken until golden brown and cooked",
+      "Serve hot with fresh vegetables or rice",
+      "Preheat oven and prepare chicken pieces",
+      "Mix honey, garlic, and soy sauce well",
+      "Brush glaze generously over chicken pieces",
+      "Bake chicken until golden brown and cooked",
+      "Serve hot with fresh vegetables or rice"
+    ],
+    "category": "20dea1a1-65ea-4a2e-b6c4-5f82aa412358",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "average_rating": "0.00",
+    "total_ratings": 0,
+    "is_featured": false,
+    "created_at": "2025-08-30T09:28:17.309Z",
+    "updated_at": "2025-08-30T13:38:24.832Z"
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": "d54a1e76-9f59-4528-8cc6-ca0a349c202a",
+  "fields": {
+    "title": "Lobster Tacos",
+    "description": "Soft tacos filled with spiced chicken, fresh vegetables, and salsa, ideal for lunch or dinner.",
+    "prepTime": "60 minutes",
+    "nutrition_info": {
+      "calories": "250",
+      "carbohydrates": "125",
+      "cholesterol": "452",
+      "protein": "85",
+      "fat": "25",
+      "fiber": "301"
+    },
+    "image": "recipes/food-27.png",
+    "ingredients": [
+      "Lobster",
+      "Chicken strips",
+      "Tortilla",
+      "Lettuce",
+      "Tomato",
+      "Salsa"
+    ],
+    "preparation_steps": [
+      "Cook chicken with spices until fully cooked",
+      "Warm tortillas lightly before filling inside",
+      "Layer lettuce, tomato, and chicken carefully",
+      "Add salsa over chicken and vegetables",
+      "Fold tacos and serve hot immediately"
+    ],
+    "category": "20dea1a1-65ea-4a2e-b6c4-5f82aa412358",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "average_rating": "5.00",
+    "total_ratings": 2,
+    "is_featured": false,
+    "created_at": "2025-08-30T10:02:59.090Z",
+    "updated_at": "2025-08-30T13:38:12.727Z"
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": "eb56ded0-6744-4302-97c6-253065a084ba",
+  "fields": {
+    "title": "Vegan Lentil Curry",
+    "description": "Flavorful lentil curry with spices and coconut milk, perfect for a filling vegan dinner.",
+    "prepTime": "55 minutes",
+    "nutrition_info": {
+      "calories": "254",
+      "carbohydrates": "258",
+      "cholesterol": "256",
+      "protein": "258",
+      "fat": "459",
+      "fiber": "871"
+    },
+    "image": "recipes/food-10.png",
+    "ingredients": [
+      "Red lentils",
+      "Onion",
+      "Garlic",
+      "Coconut milk",
+      "Curry powder"
+    ],
+    "preparation_steps": [
+      "SautΘ onions and garlic until golden fragrant",
+      "Add lentils and spices, stir well",
+      "Pour coconut milk and simmer slowly",
+      "Cook until lentils are tender and soft",
+      "Serve hot with rice or bread"
+    ],
+    "category": "c306daeb-01dc-4def-8e1e-b45142a82f9e",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "average_rating": "0.00",
+    "total_ratings": 0,
+    "is_featured": false,
+    "created_at": "2025-08-30T10:00:58.928Z",
+    "updated_at": "2025-08-30T13:38:00.902Z"
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": "ecb1e70c-d5ca-470d-8b14-6d47a83cdd31",
+  "fields": {
+    "title": "Veggie Wrap fresh",
+    "description": "Healthy wrap with fresh vegetables, hummus, and spices, perfect for lunch or a light dinner.",
+    "prepTime": "20 minutes",
+    "nutrition_info": {
+      "calories": "250",
+      "carbohydrates": "27",
+      "cholesterol": "10",
+      "protein": "578",
+      "fat": "245",
+      "fiber": "670"
+    },
+    "image": "recipes/food-10_32MiSTO.png",
+    "ingredients": [
+      "Tortilla",
+      "Lettuce",
+      "Tomato",
+      "Cucumber",
+      "Hummus"
+    ],
+    "preparation_steps": [
+      "Spread hummus evenly over the tortilla wrap",
+      "Layer lettuce, tomato, and cucumber slices",
+      "Roll the tortilla tightly, ensuring the filling stays intact",
+      "Cut the wrap in half for easy serving",
+      "Serve immediately with sauce or dressing"
+    ],
+    "category": "c306daeb-01dc-4def-8e1e-b45142a82f9e",
+    "author": [
+      "akjilani.testapplication@gmail.com"
+    ],
+    "average_rating": "3.00",
+    "total_ratings": 1,
+    "is_featured": false,
+    "created_at": "2025-08-30T13:35:28.454Z",
+    "updated_at": "2025-08-30T13:35:28.454Z"
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": "f088c06b-ae77-4e6c-942d-ffb689ed589e",
+  "fields": {
+    "title": "Chocolate Fudge Brownies",
+    "description": "Rich chocolate brownies with soft fudgy texture, perfect for dessert or a sweet snack anytime.",
+    "prepTime": "45 minutes",
+    "nutrition_info": {
+      "calories": "250",
+      "carbohydrates": "270",
+      "cholesterol": "320",
+      "protein": "157",
+      "fat": "524",
+      "fiber": "651"
+    },
+    "image": "recipes/food-9.png",
+    "ingredients": [
+      "Cocoa powder",
+      "Sugar",
+      "Butter",
+      "Flour",
+      "Chocolate chips"
+    ],
+    "preparation_steps": [
+      "Melt butter and cocoa until smooth carefully",
+      "Mix in sugar and eggs until combined",
+      "Stir flour and chocolate chips evenly",
+      "Pour batter into pan and bake",
+      "Cool slightly before cutting and serving"
+    ],
+    "category": "d6a8833e-8a6e-4a94-b54c-3a0a2fd222f7",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "average_rating": "5.00",
+    "total_ratings": 2,
+    "is_featured": false,
+    "created_at": "2025-08-30T09:31:46.839Z",
+    "updated_at": "2025-08-30T13:37:23.727Z"
+  }
+},
+{
+  "model": "recipes.reciperating",
+  "pk": "072d61b3-df20-4b71-bf16-bda45ef2af5c",
+  "fields": {
+    "recipe": "275fbc22-e6b2-4559-8f02-9514f10e9236",
+    "user": [
+      "akjilani.testapplication@gmail.com"
+    ],
+    "rating": 5,
+    "review": null,
+    "created_at": "2025-08-30T11:00:55.716Z",
+    "updated_at": "2025-09-01T04:58:45.653Z"
+  }
+},
+{
+  "model": "recipes.reciperating",
+  "pk": "0bf587dc-ddec-4645-b2a7-66bced630298",
+  "fields": {
+    "recipe": "f088c06b-ae77-4e6c-942d-ffb689ed589e",
+    "user": [
+      "akjilani.testapplication@gmail.com"
+    ],
+    "rating": 5,
+    "review": null,
+    "created_at": "2025-08-30T12:04:01.672Z",
+    "updated_at": "2025-08-30T12:04:01.672Z"
+  }
+},
+{
+  "model": "recipes.reciperating",
+  "pk": "2001b818-4aa0-4926-9bc0-bb85103f3049",
+  "fields": {
+    "recipe": "f088c06b-ae77-4e6c-942d-ffb689ed589e",
+    "user": [
+      "akjilani691995@gmail.com"
+    ],
+    "rating": 5,
+    "review": null,
+    "created_at": "2025-08-30T10:45:54.586Z",
+    "updated_at": "2025-08-30T10:45:54.586Z"
+  }
+},
+{
+  "model": "recipes.reciperating",
+  "pk": "7b7d1e7c-a2bf-48a9-a3d3-13ff19751aba",
+  "fields": {
+    "recipe": "d54a1e76-9f59-4528-8cc6-ca0a349c202a",
+    "user": [
+      "akjilani691995@gmail.com"
+    ],
+    "rating": 5,
+    "review": null,
+    "created_at": "2025-08-30T10:45:07.790Z",
+    "updated_at": "2025-08-30T10:45:07.790Z"
+  }
+},
+{
+  "model": "recipes.reciperating",
+  "pk": "833379e5-2532-48dd-993f-bd6b796a02bf",
+  "fields": {
+    "recipe": "b261402f-b1ec-4d19-9558-bfda8488b26b",
+    "user": [
+      "akjilani691995@gmail.com"
+    ],
+    "rating": 5,
+    "review": null,
+    "created_at": "2025-08-30T10:45:28.502Z",
+    "updated_at": "2025-08-30T10:45:28.502Z"
+  }
+},
+{
+  "model": "recipes.reciperating",
+  "pk": "a37b73bb-1a3d-4fa2-a19c-4a210700b67b",
+  "fields": {
+    "recipe": "d54a1e76-9f59-4528-8cc6-ca0a349c202a",
+    "user": [
+      "akjilani.testapplication@gmail.com"
+    ],
+    "rating": 5,
+    "review": null,
+    "created_at": "2025-08-30T11:01:04.088Z",
+    "updated_at": "2025-08-30T11:01:04.088Z"
+  }
+},
+{
+  "model": "recipes.reciperating",
+  "pk": "b9d3d3eb-6bcb-46ea-a292-742cc0fe22e3",
+  "fields": {
+    "recipe": "ecb1e70c-d5ca-470d-8b14-6d47a83cdd31",
+    "user": [
+      "akjilani.testapplication@gmail.com"
+    ],
+    "rating": 3,
+    "review": null,
+    "created_at": "2025-09-01T05:01:10.645Z",
+    "updated_at": "2025-09-01T05:01:10.645Z"
+  }
+},
+{
+  "model": "recipes.userfavoriterecipe",
+  "pk": "1296a89c-d21e-42fe-9b0c-e678a6156b12",
+  "fields": {
+    "user": [
+      "akjilani.testapplication@gmail.com"
+    ],
+    "recipe": "275fbc22-e6b2-4559-8f02-9514f10e9236",
+    "created_at": "2025-09-01T04:58:42.437Z"
+  }
+},
+{
+  "model": "recipes.userfavoriterecipe",
+  "pk": "34d5f42e-a508-41e0-aebe-e402922068cc",
+  "fields": {
+    "user": [
+      "akjilani691995@gmail.com"
+    ],
+    "recipe": "b261402f-b1ec-4d19-9558-bfda8488b26b",
+    "created_at": "2025-08-30T10:45:27.574Z"
+  }
+},
+{
+  "model": "recipes.userfavoriterecipe",
+  "pk": "6044ef83-6384-43fa-abcd-813c79dff3bd",
+  "fields": {
+    "user": [
+      "akjilani691995@gmail.com"
+    ],
+    "recipe": "d54a1e76-9f59-4528-8cc6-ca0a349c202a",
+    "created_at": "2025-08-30T10:45:06.926Z"
+  }
+},
+{
+  "model": "recipes.userfavoriterecipe",
+  "pk": "7b782bef-a24f-413c-b552-71734a92f20a",
+  "fields": {
+    "user": [
+      "akjilani.testapplication@gmail.com"
+    ],
+    "recipe": "d54a1e76-9f59-4528-8cc6-ca0a349c202a",
+    "created_at": "2025-08-30T11:01:04.654Z"
+  }
+},
+{
+  "model": "recipes.userfavoriterecipe",
+  "pk": "8411bdde-c166-493f-bbed-e6d58f9f3f37",
+  "fields": {
+    "user": [
+      "akjilani.testapplication@gmail.com"
+    ],
+    "recipe": "f088c06b-ae77-4e6c-942d-ffb689ed589e",
+    "created_at": "2025-08-30T12:04:00.641Z"
+  }
+},
+{
+  "model": "recipes.userfavoriterecipe",
+  "pk": "8bdc5f92-88bd-47d9-961d-3aa9323a01b1",
+  "fields": {
+    "user": [
+      "akjilani691995@gmail.com"
+    ],
+    "recipe": "f088c06b-ae77-4e6c-942d-ffb689ed589e",
+    "created_at": "2025-08-30T10:45:53.532Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": "36df428e-8576-4680-8f69-6efa125c0ed2",
+  "fields": {
+    "title": "Garlic Herb Roast Chicken",
+    "description": "Juicy roast chicken seasoned with garlic, lemon, and fresh herbs. Crispy skin and tender meat make this a perfect dinner for family gatherings or weekend meals.",
+    "content": "Juicy roast chicken seasoned with garlic, lemon, and fresh herbs. Crispy skin and tender meat make this a perfect dinner for family gatherings or weekend meals.\r\n## Ingredients\r\nWhole chicken\r\nGarlic cloves\r\nLemon\r\nRosemary\r\nThyme\r\nOlive oil\r\nSalt\r\nPepper\r\n## Steps\r\nPreheat the oven to the proper temperature for roasting.\r\nRub the chicken inside and out with garlic, herbs, and olive oil.\r\nSqueeze lemon juice over the chicken and season with salt and pepper.\r\nPlace chicken on a roasting pan and cook until the skin turns golden brown.\r\nAllow the chicken to rest for a few minutes before carving.\r\nServe with roasted vegetables or mashed potatoes for a complete meal.",
+    "featured_image": "blog_images/food-3.png",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "category": "a031e74b-9ed9-412f-94b4-222cdd2a2cff",
+    "view_count": 9,
+    "is_published": false,
+    "created_at": "2025-08-30T10:31:21.818Z",
+    "updated_at": "2025-08-30T10:31:21.818Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": "39f4b611-4399-447d-bb12-daf11ffbf583",
+  "fields": {
+    "title": "Cozy Vegetable Soup",
+    "description": "A warming, hearty soup filled with seasonal vegetables and herbs. Perfect for vegan dinners or light lunches.",
+    "content": "A warming, hearty soup filled with seasonal vegetables and herbs. Perfect for vegan dinners or light lunches.\r\n## Ingredients\r\nCarrots\r\nCelery\r\nOnions\r\nPotatoes\r\nTomatoes\r\nVegetable broth\r\nGarlic\r\nHerbs\r\nSalt\r\nPepper\r\n## Steps\r\nSautΘ onions, carrots, and celery until soft.\r\nAdd garlic and cook briefly.\r\nPour in vegetable broth and bring to a simmer.\r\nAdd potatoes, tomatoes, and herbs.\r\nCook until vegetables are tender.\r\nServe warm as a comforting meal.",
+    "featured_image": "blog_images/food-18.png",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "category": "1f4db9bb-40ab-48b8-8b49-3581b018495f",
+    "view_count": 18,
+    "is_published": false,
+    "created_at": "2025-08-30T10:41:33.425Z",
+    "updated_at": "2025-08-30T10:41:33.425Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": "641bcace-e18c-4c91-83e3-c01ec4df1b88",
+  "fields": {
+    "title": "Baja Fish Tacos",
+    "description": "Fresh tacos filled with crispy fish, cabbage slaw, and lime, making a refreshing and tasty lunch option.",
+    "content": "Crispy fish with tangy slaw wrapped in tortillas. Light, fresh, and perfect for lunch or casual dinners.\r\n## Ingredients\r\nWhite fish fillets\r\nTortillas\r\nCabbage\r\nCilantro\r\nLime\r\nMayonnaise\r\nSpices\r\nSalt and pepper\r\n## Steps\r\nSeason fish with spices and fry until crispy.\r\nPrepare slaw with cabbage, lime juice, and salt.\r\nWarm tortillas briefly.\r\nAssemble tacos with fish and slaw.\r\nServe immediately with lime wedges.",
+    "featured_image": "blog_images/food-14.png",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "category": "1f4db9bb-40ab-48b8-8b49-3581b018495f",
+    "view_count": 3,
+    "is_published": false,
+    "created_at": "2025-08-30T10:28:03.010Z",
+    "updated_at": "2025-08-30T10:28:03.010Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": "7eabf371-afd2-4d4f-8144-4d691c8b143b",
+  "fields": {
+    "title": "Herb-Roasted Chicken Thighs",
+    "description": "Juicy chicken thighs roasted with herbs and garlic. Crisp skin and tender meat make an easy weeknight dinner.",
+    "content": "Juicy chicken thighs roasted with herbs and garlic. Crisp skin and tender meat make an easy weeknight dinner.\r\n## Ingredients\r\nChicken thighs\r\nGarlic\r\nRosemary\r\nThyme\r\nOlive oil\r\nSalt\r\nPepper\r\n## Steps\r\nPreheat oven and prepare chicken.\r\nRub garlic, herbs, and olive oil over chicken.\r\nSeason with salt and pepper.\r\nRoast in oven until skin is golden and meat is cooked.\r\nLet rest before serving.\r\nServe with vegetables or rice.",
+    "featured_image": "blog_images/food-5.png",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "category": "322c9b2d-e68d-4186-b3bb-7ed89b280029",
+    "view_count": 3,
+    "is_published": false,
+    "created_at": "2025-08-30T10:38:10.878Z",
+    "updated_at": "2025-08-30T10:38:10.878Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": "a81d807b-3bc9-4a43-b4e3-b62c8e4b011f",
+  "fields": {
+    "title": "Bright Fruit Salad",
+    "description": "A colorful mix of seasonal fruits with a hint of lemon juice. Light, refreshing, and perfect for breakfast or dessert.",
+    "content": "A colorful mix of seasonal fruits with a hint of lemon juice. Light, refreshing, and perfect for breakfast or dessert.\r\n## Ingredients\r\nApples\r\nOranges\r\nGrapes\r\nBananas\r\nLemon juice\r\nMint leaves\r\n## Steps\r\nPeel and cut fruits into bite-sized pieces.\r\nMix fruits gently in a bowl.\r\nAdd lemon juice and mint leaves.\r\nToss lightly to combine flavors.\r\nServe chilled for best taste.",
+    "featured_image": "blog_images/food-1.png",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "category": "d22deab4-9375-43d5-815d-a1a81f252ded",
+    "view_count": 2,
+    "is_published": false,
+    "created_at": "2025-08-30T10:39:06.588Z",
+    "updated_at": "2025-08-30T10:39:06.588Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": "b1f898e5-83cf-46db-8ec0-921b6ea9541d",
+  "fields": {
+    "title": "Sunrise Berry Smoothie",
+    "description": "A refreshing smoothie with mixed berries, yogurt, honey, and optional oats. Full of vitamins, antioxidants, and flavor to energize your morning.",
+    "content": "A refreshing smoothie with mixed berries, yogurt, honey, and optional oats. Full of vitamins, antioxidants, and flavor to energize your morning.\r\n## Ingredients\r\nMixed berries\r\nYogurt or plant-based yogurt\r\nHoney\r\nOats (optional)\r\nMilk\r\n## Steps\r\nPlace berries and yogurt into a blender.\r\nAdd honey and milk, blending until smooth.\r\nInclude oats if you prefer extra thickness.\r\nPour into a glass and serve immediately.\r\nEnjoy as a quick, nutritious breakfast or snack.",
+    "featured_image": "blog_images/article-5.png",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "category": "0ecf541c-73c4-4f69-be42-6ea58abb39e1",
+    "view_count": 2,
+    "is_published": false,
+    "created_at": "2025-08-30T10:35:21.638Z",
+    "updated_at": "2025-08-30T10:35:21.638Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": "cdd9afbc-fd25-4b0a-a9f0-440198888e75",
+  "fields": {
+    "title": "Chocolate Lava Cake",
+    "description": "Rich chocolate cake with a molten center that oozes when cut. Perfect dessert for chocolate lovers or special occasions like birthdays or romantic dinners.",
+    "content": "Rich chocolate cake with a molten center that oozes when cut. Perfect dessert for chocolate lovers or special occasions like birthdays or romantic dinners.\r\n## Ingredients\r\nDark chocolate\r\nButter\r\nSugar\r\nEggs\r\nFlour\r\nVanilla extract\r\nSalt\r\n## Steps\r\nMelt the chocolate and butter together over low heat until smooth.\r\nWhisk eggs and sugar in a separate bowl until creamy and pale.\r\nFold the chocolate mixture gently into the eggs, then add flour and salt.\r\nPour the batter into prepared ramekins and bake until edges are firm but centers are soft.\r\nRemove from oven and let cool slightly before serving.\r\nCut into the center to reveal the molten chocolate and enjoy immediately.",
+    "featured_image": "blog_images/food-27.png",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "category": "c6984548-73de-4361-b969-923f31f021d0",
+    "view_count": 2,
+    "is_published": false,
+    "created_at": "2025-08-30T10:32:29.576Z",
+    "updated_at": "2025-08-30T10:32:29.576Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": "d9f6118e-1d51-4a7d-a45a-f9463c6fb1ad",
+  "fields": {
+    "title": "Crispy Chicken Burger",
+    "description": "Golden, crispy chicken fillet on a soft bun with lettuce, pickles, and sauce. Perfect for a quick, satisfying meal or lunch with friends.",
+    "content": "## Ingredients\r\nChicken fillet\r\nFlour\r\nEgg\r\nBread crumbs\r\nLettuce\r\nPickles\r\nBurger bun\r\nMayonnaise or sauce\r\n## Steps\r\nCoat chicken in flour, dip in egg, and cover with bread crumbs.\r\nFry until golden and crispy.\r\nPlace chicken fillet on a toasted bun.\r\nAdd lettuce, pickles, and sauce of your choice.\r\nServe immediately while crispy for maximum flavor.",
+    "featured_image": "blog_images/food-13.png",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "category": "727f7c53-bf32-4986-a318-d529a96f529d",
+    "view_count": 9,
+    "is_published": false,
+    "created_at": "2025-08-30T10:36:42.083Z",
+    "updated_at": "2025-08-30T10:36:42.083Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": "e2d8322e-70b7-439f-9428-80ce4952f9c3",
+  "fields": {
+    "title": "Chewy Choc-Chip Cookies",
+    "description": "Soft, chewy cookies packed with chocolate chips. Perfect snack or dessert for any time, especially with a glass of milk.",
+    "content": "Soft, chewy cookies packed with chocolate chips. Perfect snack or dessert for any time, especially with a glass of milk.\r\n## Ingredients\r\nFlour\r\nButter\r\nSugar\r\nEggs\r\nChocolate chips\r\nVanilla extract\r\nBaking soda\r\nSalt\r\n## Steps\r\nCream butter and sugar together until light.\r\nAdd eggs and vanilla extract, mixing well.\r\nFold in flour, baking soda, salt, and chocolate chips.\r\nScoop dough onto a baking tray.\r\nBake until edges are golden and centers remain soft.\r\nCool slightly and serve.",
+    "featured_image": "blog_images/food-4.png",
+    "author": [
+      "akjilani691995@gmail.com"
+    ],
+    "category": "e75c625e-4046-4621-82be-7afa25ce4054",
+    "view_count": 1,
+    "is_published": false,
+    "created_at": "2025-08-30T10:33:31.002Z",
+    "updated_at": "2025-08-30T10:33:31.002Z"
+  }
+},
+{
+  "model": "blogs.blogcomment",
+  "pk": "62acb95c-70f9-456c-a851-ba3b74de3f9e",
+  "fields": {
+    "blog": "36df428e-8576-4680-8f69-6efa125c0ed2",
+    "user": [
+      "akjilani691995@gmail.com"
+    ],
+    "content": "Appreciate your instructions",
+    "parent_comment": null,
+    "is_approved": true,
+    "created_at": "2025-08-30T10:58:29.780Z",
+    "updated_at": "2025-08-30T10:58:29.780Z"
+  }
+},
+{
+  "model": "blogs.blogcomment",
+  "pk": "9f58c107-bdec-4e0a-9486-6567246b0822",
+  "fields": {
+    "blog": "641bcace-e18c-4c91-83e3-c01ec4df1b88",
+    "user": [
+      "akjilani691995@gmail.com"
+    ],
+    "content": "Awesome Blogs",
+    "parent_comment": null,
+    "is_approved": true,
+    "created_at": "2025-08-30T10:28:28.436Z",
+    "updated_at": "2025-08-30T10:28:28.436Z"
+  }
+},
+{
+  "model": "blogs.blogcomment",
+  "pk": "be865809-79da-4918-acbf-f0b70cad81bf",
+  "fields": {
+    "blog": "39f4b611-4399-447d-bb12-daf11ffbf583",
+    "user": [
+      "akjilani.testapplication@gmail.com"
+    ],
+    "content": "Good",
+    "parent_comment": null,
+    "is_approved": true,
+    "created_at": "2025-08-30T11:01:15.797Z",
+    "updated_at": "2025-08-30T11:01:15.797Z"
+  }
+},
+{
+  "model": "blogs.blogcomment",
+  "pk": "c2443909-5b8c-41a3-99aa-a66b0ac16218",
+  "fields": {
+    "blog": "36df428e-8576-4680-8f69-6efa125c0ed2",
+    "user": [
+      "akjilani.testapplication@gmail.com"
+    ],
+    "content": "Not Bad",
+    "parent_comment": null,
+    "is_approved": true,
+    "created_at": "2025-08-30T11:01:26.086Z",
+    "updated_at": "2025-08-30T11:01:26.086Z"
+  }
+},
+{
+  "model": "blogs.blogcomment",
+  "pk": "c8d3f97f-5292-4c6a-ba87-ef4e5f6c426d",
+  "fields": {
+    "blog": "d9f6118e-1d51-4a7d-a45a-f9463c6fb1ad",
+    "user": [
+      "akjilani.testapplication@gmail.com"
+    ],
+    "content": "jo",
+    "parent_comment": null,
+    "is_approved": true,
+    "created_at": "2025-09-01T05:04:30.423Z",
+    "updated_at": "2025-09-01T05:04:30.423Z"
+  }
+},
+{
+  "model": "interactions.contactmessage",
+  "pk": "596a7e1e-88b9-408e-b1bd-e00bb48b856d",
+  "fields": {
+    "sender_name": "Akjilani_1",
+    "sender_email": "akjilani691995@gmail.com",
+    "message": "I am also good. Where are you from?",
+    "recipient": [
+      "akjilani.testapplication@gmail.com"
+    ],
+    "is_read": false,
+    "message_type": "general",
+    "created_at": "2025-08-30T11:02:45.519Z",
+    "parent_message": "e34f8c8f-1209-47b1-9bea-f3dbdb4fbe7c"
+  }
+},
+{
+  "model": "interactions.contactmessage",
+  "pk": "73e9af56-aa52-43f5-b200-23ac75baefe0",
+  "fields": {
+    "sender_name": "Abdul Kader Jilani",
+    "sender_email": "akjilani691995@gmail.com",
+    "message": "Hell there",
+    "recipient": [
+      "akjilani.testapplication@gmail.com"
+    ],
+    "is_read": false,
+    "message_type": "general",
+    "created_at": "2025-08-30T10:59:54.116Z",
+    "parent_message": null
+  }
+},
+{
+  "model": "interactions.contactmessage",
+  "pk": "e34f8c8f-1209-47b1-9bea-f3dbdb4fbe7c",
+  "fields": {
+    "sender_name": "Akjilani_2",
+    "sender_email": "akjilani.testapplication@gmail.com",
+    "message": "Hello, How are You Brother? I doing good",
+    "recipient": [
+      "akjilani691995@gmail.com"
+    ],
+    "is_read": false,
+    "message_type": "general",
+    "created_at": "2025-08-30T11:01:54.443Z",
+    "parent_message": "73e9af56-aa52-43f5-b200-23ac75baefe0"
+  }
+}
+]
