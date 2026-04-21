@@ -12,9 +12,6 @@ firebase_service_account_key.json
 .venv/
 venv/
 
-# Django
-staticfiles/
-
 # System
 .DS_Store
 Thumbs.db
@@ -28,10 +25,6 @@ __pycache__/
 # Environment
 .env
 venv/
-
-# Django
-staticfiles/
-media/
 
 # System
 .DS_Store
