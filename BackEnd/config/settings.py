@@ -31,6 +31,8 @@ INSTALLED_APPS = [
     "recipes.apps.RecipesConfig",
     "blogs.apps.BlogsConfig",
     "interactions",
+    'cloudinary',
+    'cloudinary_storage',   
 ]
 
 MIDDLEWARE = [
@@ -115,6 +117,16 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Cloudinary
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME', 'duzitehxj'),
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
+}
+
+if os.environ.get('CLOUDINARY_API_KEY'):
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
