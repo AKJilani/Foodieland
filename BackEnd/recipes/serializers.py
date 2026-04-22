@@ -3,6 +3,19 @@ from .models import RecipeCategory, Recipe, RecipeRating, UserFavoriteRecipe
 
 
 class RecipeCategorySerializer(serializers.ModelSerializer):
+    icon = serializers.SerializerMethodField()
+
+    def get_icon(self, obj):
+        if not obj.icon:
+            return None
+        url = str(obj.icon)
+        if url.startswith('http'):
+            return url
+        request = self.context.get('request')
+        if request:
+            return request.build_absolute_uri(f'/media/{url}')
+        return url
+
     class Meta:
         model = RecipeCategory
         fields = "__all__"
@@ -18,7 +31,7 @@ class RecipeSerializer(serializers.ModelSerializer):
             return None
         url = str(obj.image)
         if url.startswith('http'):
-            return url  # Cloudinary URL সরাসরি return
+            return url
         request = self.context.get('request')
         if request:
             return request.build_absolute_uri(f'/media/{url}')
