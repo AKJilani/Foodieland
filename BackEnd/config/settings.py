@@ -143,6 +143,7 @@ SIMPLE_JWT = {
 
 # CORS
 CORS_ALLOWED_ORIGINS = [
+    "https://foodieland-front-end.vercel.app",
     "https://foodieland-front-end-git-main-akjilani007s-projects.vercel.app",
     "http://localhost:3000",
     "http://localhost:5500",
