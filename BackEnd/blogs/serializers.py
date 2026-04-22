@@ -11,6 +11,18 @@ class BlogCategorySerializer(serializers.ModelSerializer):
 
 class BlogSerializer(serializers.ModelSerializer):
     author_name = serializers.CharField(source="author.name", read_only=True)
+    featured_image = serializers.SerializerMethodField()
+
+    def get_featured_image(self, obj):
+        if not obj.featured_image:
+            return None
+        url = str(obj.featured_image)
+        if url.startswith('http'):
+            return url
+        request = self.context.get('request')
+        if request:
+            return request.build_absolute_uri(f'/media/{url}')
+        return url
 
     class Meta:
         model = Blog
@@ -31,7 +43,6 @@ class BlogCommentSerializer(serializers.ModelSerializer):
         fields = "__all__"
         read_only_fields = ["id", "created_at", "updated_at", "user"]
 
-
-def create(self, validated_data):
-    validated_data["user"] = self.context["request"].user
-    return super().create(validated_data)
+    def create(self, validated_data):
+        validated_data["user"] = self.context["request"].user
+        return super().create(validated_data)
