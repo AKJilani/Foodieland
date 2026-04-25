@@ -1,3 +1,5 @@
+**Special Notes about Hosting: FrontEnd Hosted to Vercel, Backend Hosted to Render and Database Hosted to Supabase**
+
 # FoodieLand 🍳
 
 A modern, full-stack community-driven platform where food enthusiasts can share recipes, write culinary blogs, and connect with fellow cooking lovers. Built with Django REST Framework backend and React frontend.
@@ -349,6 +351,3 @@ For any inquiries about this project:
 ---
 
 **Note**: This project demonstrates proficiency in full-stack development, RESTful API design, modern frontend frameworks, user authentication, database design, and deployment-ready application architecture.
-
-
-Special Notes about Hosting: FrontEnd Hosted to Vercel, Backend Hosted to Render and Database Hosted to Supabase
