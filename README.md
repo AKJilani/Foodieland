@@ -349,3 +349,6 @@ For any inquiries about this project:
 ---
 
 **Note**: This project demonstrates proficiency in full-stack development, RESTful API design, modern frontend frameworks, user authentication, database design, and deployment-ready application architecture.
+
+
+Special Notes about Hosting: FrontEnd Hosted to Vercel, Backend Hosted to Render and Database Hosted to Supabase
